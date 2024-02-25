@@ -80,7 +80,7 @@ const ContactUs = () => {
       <ToastContainer position="top-right" />
       <Form onSubmit={handleFormSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name">Your Names</label>
           <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="form-group">
