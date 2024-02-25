@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const router = require("./routes/router");
 const cors = require("cors")
-const port = 8006;
+const port = 8004;
 
 
 // middle ware
