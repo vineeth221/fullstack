@@ -5,7 +5,8 @@ export const sendEmail = (emailData) => {
     try {
       dispatch({ type: 'SEND_EMAIL_REQUEST' });
 
-      const res = await fetch('http://localhost:8006/register', {
+      // Use relative path here since you have set up a proxy in package.json
+      const res = await fetch('/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
