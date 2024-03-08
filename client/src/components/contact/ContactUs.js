@@ -1,3 +1,5 @@
+// ContactUs.js
+
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
@@ -43,21 +45,35 @@ const ContactUs = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       setButtonState('error');
+      setNotifications((prevNotifications) => [
+        generateRandomNotif('Failed to send email. Please try again later.'),
+        ...prevNotifications,
+      ]);
+      setShowModal(false);
     }
   };
 
   useEffect(() => {
-    if (emailState.success || emailState.error) {
+    if (emailState.success) {
       const timerId = setTimeout(() => {
         setButtonState('nothing');
         setName('');
         setMobile('');
         setSubject('');
         setEmail('');
-        setShowModal(true);
-      });
+        setShowModal(true);  // Show modal only on success
+      }, 2000);
 
       return () => clearTimeout(timerId);
+    } else if (emailState.error) {
+      setButtonState('error');
+      setNotifications((prevNotifications) => [
+        generateRandomNotif('Failed to send email. Please try again later.'),
+        ...prevNotifications,
+      ]);
+    }
+    else{
+      setShowModal(false);  // Show modal only on success
     }
   }, [emailState.success, emailState.error]);
 
