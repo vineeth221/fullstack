@@ -16,7 +16,7 @@ export const sendEmail = (emailData) => {
 
       const data = await res.json();
 
-      if (res.status === 201) {
+      if (res.status === 204) {  // Check for the appropriate status code (204 for success)
         dispatch({ type: 'SEND_EMAIL_SUCCESS', payload: data });
       } else {
         dispatch({ type: 'SEND_EMAIL_FAILURE', payload: data.error });
