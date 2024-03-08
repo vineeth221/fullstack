@@ -5,7 +5,7 @@ const app = express();
 const port = 8005;
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/emails', {
+mongoose.connect('mongodb://43.204.231.33:27017/emails', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
