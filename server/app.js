@@ -13,10 +13,11 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
-mongoose.connect("mongodb://43.204.231.33/:27017", {
+mongoose.connect("mongodb://43.204.231.33:27017", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 // Set the 'views' directory for Pug templates
 app.set('views', path.join(__dirname, 'views'));
 
