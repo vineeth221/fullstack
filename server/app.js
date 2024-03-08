@@ -14,12 +14,9 @@ app.use(cors());
 app.use(router);
 
 mongoose.connect("mongodb://43.204.231.33/:27017/emails", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  ssl: true,
-  sslValidate: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
 });
 
 // Set the 'views' directory for Pug templates
