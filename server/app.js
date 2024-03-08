@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
-mongoose.connect("mongodb://43.204.231.33:27017", {
+mongoose.connect("mongodb://43.204.231.33/:27017/emails", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
