@@ -10,7 +10,7 @@ const AdminPortal = () => {
 
   useEffect(() => {
     // Fetch emails from the Express server
-    axios.get('http://43.204.231.33:8005/api/emails')
+    axios.get('/api/emails')
       .then(response => dispatch(setEmails(response.data)))
       .catch(error => console.error('Error fetching emails:', error));
   }, [dispatch]);
