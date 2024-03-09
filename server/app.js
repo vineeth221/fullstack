@@ -18,11 +18,12 @@ mongoose.connect("mongodb://43.204.231.33:27017/emails", {
     useUnifiedTopology: true,
 });
 
+
 // Set the 'views' directory for Pug templates
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 
 // Set Pug as the view engine
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
