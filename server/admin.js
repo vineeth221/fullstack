@@ -19,32 +19,19 @@ const emailSchema = new mongoose.Schema({
 
 const Email = mongoose.model('Email', emailSchema);
 
-// Admin portal routes
-app.get('/', async (req, res) => {
+// API endpoint to fetch emails
+app.get('/api/emails', async (req, res) => {
   try {
-    // Load emails from MongoDB
+    // Fetch emails from MongoDB
     const emails = await Email.find();
 
-    // Send a simple HTML response
-    res.send(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Admin Portal</title>
-        </head>
-        <body>
-          <h1>Admin Portal</h1>
-          <ul>
-            ${emails.map(email => `<li>${email.name} - ${email.email}</li>`).join('')}
-          </ul>
-        </body>
-      </html>
-    `);
+    // Respond with a JSON array of emails
+    res.json(emails);
   } catch (error) {
     console.error('Error loading emails:', error);
 
-    // Send an internal server error response with details
-    res.status(500).send('Internal Server Error');
+    // Handle internal server error
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
