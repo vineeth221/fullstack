@@ -2,7 +2,7 @@
   "name": "admin-potal",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8005",
+  "proxy": "http://43.204.231.33:8005",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
