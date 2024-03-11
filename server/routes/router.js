@@ -1,5 +1,4 @@
 // server/routes/router.js
-
 const express = require("express");
 const router = new express.Router();
 const nodemailer = require("nodemailer");
@@ -33,7 +32,12 @@ router.post("/register", async (req, res) => {
       mobile,
       subject,
     });
+
+    console.log("New Email Object:", newEmail); // Add this log statement
+
     await newEmail.save();
+
+    console.log("Email saved to MongoDB:", newEmail); // Add this log statement
 
     // Send the email
     await transporter.sendMail(mailOptions);
@@ -41,7 +45,7 @@ router.post("/register", async (req, res) => {
     // Respond with a 204 status code for success without a response body
     res.status(204).send();
   } catch (error) {
-    console.error("Error" + error);
+    console.error("Error", error);
     res.status(500).json({ status: 500, error });
   }
 });
