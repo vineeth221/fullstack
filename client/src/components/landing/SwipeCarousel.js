@@ -57,7 +57,7 @@ const SPRING_OPTIONS = {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-950 py-2"> 
+    <div className="relative overflow-hidden bg-neutral-950 py-2">  
       <motion.div
         drag="x"
         dragConstraints={{
@@ -72,7 +72,7 @@ const SPRING_OPTIONS = {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing"
+        className="flex cursor-grab items-center active:cursor-grabbing md:h-[100vh] sm:h-[50vh] lg:h-[100vh]"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>

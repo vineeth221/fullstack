@@ -40,6 +40,21 @@
   }
 }
 
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-from-top {
+  animation: slideInFromTop 0.4s ease-in-out;
+}
+
 .myBtn1 {
   box-sizing: border-box;
   appearance: none;
@@ -82,27 +97,30 @@
   margin-top: 0.5rem;
   margin-left: 2rem;
 }
-
+.flex.space-x-4 a:hover {
+  background-color: #6366f1;
+  border-radius: 10px;
+}
 /* Add a bottom line to the list items */
-.flex.space-x-4 a::after {
+/* .flex.space-x-4 a::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 17px;
   width: 0;
   height: 3px;
-  /* background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b); */
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
   background-color: #6366f1;
   transition: width 0.3s ease; 
   border-radius: 50px;
-}
+} */
 
 /* Expand the bottom line when hovered */
-.flex.space-x-4 a:hover::after {
+/* .flex.space-x-4 a:hover::after {
   width: 50%;
   display: flex;
   justify-content: center;
-}
+} */
 .set-height{
   height: 90px;
 }

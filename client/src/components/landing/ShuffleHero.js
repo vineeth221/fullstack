@@ -17,7 +17,7 @@ const ShuffleHero = () => {
         <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
           We Build For You
         </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
+        <h3 className="text-4xl md:text-6xl font-semibold" style={{lineHeight: "57px"}}>
           Let's change it up a bit
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
