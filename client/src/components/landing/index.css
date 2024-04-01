@@ -1,0 +1,215 @@
+.custom-count {
+    width: 80%;
+    background: rgb(99 102 241);
+    color: #fff;
+    padding: 5rem;
+    border: 1px solid #D4D4D4;
+    justify-content: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.text-extra-small {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.text-4xl {
+    font-size: 3.5rem;
+}
+
+.custom-text {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #FFF;
+    text-align: center;
+
+}
+
+.small-space {
+    display: block;
+    height: 40px;
+}
+
+.small-sub-space{
+    display: block;
+    height: 10px;
+}
+
+.main-heading p {
+    text-align: center;
+    padding: 20px;
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 700;
+}
+span.colour-text{
+    color:rgb(99 102 241);
+}
+
+.carousel-inner {
+    height: 538px;
+  }
+  
+  .carousel-control-prev {
+    height: 50px;
+    left: unset !important;
+    position: fixed !important;
+    top: -5px !important;
+    right: 50%;
+    color: gray !important;
+  }
+  
+  .carousel-control-next {
+    height: 50px;
+    right: unset !important;
+    position: fixed !important;
+    top: -5px !important;
+    left: 50%;
+    color: gray !important;
+  }
+  .color-customs{
+    padding:.5rem ;
+  }
+  .autoslideImg{
+    display: flex;
+    background: #0f172a;
+    border-radius: .5rem;
+    height: 11rem;
+  }
+  .autoslideImg img{
+    border-radius: .5rem 0 0 .5rem;
+  }
+  .autoslideImg p{
+   color: #CBD5E1;
+   font-size: .9rem;
+  }
+  .autoslideImg h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+   } .autoslideImg h3{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+   }
+  .row-space{
+    padding: 0.7rem;
+  }
+  video {
+    max-width: 100%;
+    height: 500px;
+}
+a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading-6 {
+  font-size: 1.3rem;
+}
+.coming-soon{
+  position: relative;
+}
+.coming-soon:after{
+  content: "";
+  position: absolute;
+  width: 45%;
+  border-radius: 20px 0px 0px 20px;
+  height: 255px;
+  top: -41px;
+  background: rgb(99 102 241);
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+.coming-title{
+  position: relative;
+
+}
+.coming-title:after{
+ content: "COMING SOON";
+  position: absolute;
+  width: 230px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 0px 0px 20px 20px;
+  height: 64px;
+  top: -41px;
+  background: rgb(20 184 166 / var(--tw-text-opacity));
+  right: 30%; /* Center the title horizontally */
+  transform: translateX(50%); /* Center the title horizontally */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+.coming-soon .sample {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 60px;
+  width: 100%;
+  max-width: 42%;
+}
+.card-container {
+  width: 300px;
+  background: rgb(99 102 241);
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+
+}
+.centered-div{
+  display: flex;
+  justify-content: center;
+}
+.coming-card-title{
+  position: relative;
+}
+.coming-card-title:after {
+  content: "COMING SOON";
+  position: absolute;
+  width: 150px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  padding: .7rem;
+  border-radius: 0px 0px 20px 20px;
+  height: 46px;
+  top: 0px;
+  background: rgb(20 184 166 / var(--tw-text-opacity));
+  right: 65%;
+  transform: translateX(50%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+.carousal-icon {
+  position: relative;
+  top: 88px;
+  left: 50%; /* Center the icon horizontally within the card */
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 100%;
+}
+.autoslide-img img{
+  width:100%;
+  height:86px;
+}
+.autoslide-img p{
+ text-align: center;
+ font-size: 14px;
+ padding:1rem ;
+}
+.autoslide-img-mob img{
+  width:100%;
+  height:70px;
+}
+.autoslide-img-mob p{
+ text-align: center;
+ font-size: 14px;
+ padding:1rem ;
+ color: #fff;
+}
+.form-clr{
+  background-color:#4f46e5;
+}
+.notifications-container{
+position: relative;
+top :3rem;
+}
