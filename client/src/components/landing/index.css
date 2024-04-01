@@ -35,10 +35,14 @@
     display: block;
     height: 10px;
 }
+.special-hght{
+  height:550px !important;
+}
 
 .main-heading p {
     text-align: center;
     padding: 20px;
+    line-height:34px;
     color: #1f2937;
     font-size: 2rem;
     font-weight: 700;
@@ -181,7 +185,7 @@ a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading
 }
 .carousal-icon {
   position: relative;
-  top: 88px;
+  top: 70px;
   left: 50%; /* Center the icon horizontally within the card */
   transform: translateX(-50%);
   width: 70%;

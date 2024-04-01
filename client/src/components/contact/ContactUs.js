@@ -19,6 +19,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formHeight, setFormHeight] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isLoadingContent, setIsLoadingContent] = useState(true);
   const formRef = useRef(null);
   const dispatch = useDispatch();
@@ -113,6 +114,19 @@ const ContactUs = () => {
     }
   }, [sendEmailSuccessState, dispatch]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 600);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       {isLoadingContent ? (
@@ -120,11 +134,15 @@ const ContactUs = () => {
       ) : (
         <>
           <Navbar />
-          <div className='small-space' />
-          <div className="min-h-screen flex flex-col justify-center items-center">
+          {isSmallScreen ? (
+        <div className='small-sub-space' />
+      ) : (
+        <div className='small-space' />
+      )}
+          <div className="min-h-screen flex flex-col justify-center items-center px-4">
             <ToastContainer position="top-right" />
             <div className="flex justify-center items-start w-full">
-              <div ref={formRef} className="w-full max-w-md p-8 bg-white rounded-lg shadow-md form-clr mr-4">
+              <div ref={formRef} className="w-full max-w-md p-8 bg-white rounded-lg shadow-md form-clr">
                 <h1 className="mb-6 text-3xl font-bold text-white ">Contact Us</h1>
                 <Form ref={formRef} onSubmit={handleFormSubmit} className="space-y-4">
                   <div>
