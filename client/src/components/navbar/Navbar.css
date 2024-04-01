@@ -1,0 +1,124 @@
+.nav-top{
+  z-index: 111;
+}
+.custom-height{
+  display: block;
+  height: 90px;
+}
+.myBtn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.third {
+  border-color: #6366F1;
+  color: #fff;
+  box-shadow: 0 0 30px 30px #6366F1 inset, 0 0 0 0 #6366F1;
+  transition: alreml 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 #6366F1 inset, 0 0 5px 3px #6366F1;
+  }
+}
+
+.myBtn1 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.third1 {
+  border-color: #6366f1;
+  color: #fff;
+  box-shadow: 0 0 30px 30px #6366f1 inset, 0 0 0 0 #6366f1;
+  transition: alreml 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 #6366f1 inset, 0 0 5px 3px #6366f1;
+  }
+}
+
+.flex.space-x-4 a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+
+/* Add a bottom line to the list items */
+.flex.space-x-4 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  width: 0;
+  height: 3px;
+  /* background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b); */
+  background-color: #6366f1;
+  transition: width 0.3s ease; 
+  border-radius: 50px;
+}
+
+/* Expand the bottom line when hovered */
+.flex.space-x-4 a:hover::after {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.set-height{
+  height: 90px;
+}
+
+.custom-img{
+ width: 50px;
+ height: 50px;
+}
+
+span.logo-text {
+  color: #fff;
+  font-size: 17px;
+}
+
+@media (max-width: 639px) {
+  .myBtn {
+    display: none;
+  }
+}

@@ -1,14 +1,21 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { FiAlertCircle } from "react-icons/fi";
+import PropTypes from 'prop-types';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FiAlertCircle } from 'react-icons/fi';
 
-const SpringModal = ({ isOpen, setIsOpen }) => {
+const SpringModal = ({ isOpen, setIsOpen, handleCloseModal }) => {
   const closeModal = () => {
+    if (typeof setIsOpen !== 'function') {
+      console.error('setIsOpen is not a function:', setIsOpen);
+      return;
+    }
     setIsOpen(false);
+    handleCloseModal();
   };
 
   const handleContentClick = (e) => {
     e.stopPropagation();
   };
+  console.log('isOpen:', isOpen);
 
   return (
     <AnimatePresence>
@@ -21,9 +28,9 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
           className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
-            initial={{ scale: 0, rotate: "12.5deg" }}
-            animate={{ scale: 1, rotate: "0deg" }}
-            exit={{ scale: 0, rotate: "0deg" }}
+            initial={{ scale: 0, rotate: '12.5deg' }}
+            animate={{ scale: 1, rotate: '0deg' }}
+            exit={{ scale: 0, rotate: '0deg' }}
             onClick={handleContentClick}
             className="bg-gradient-to-br from-violet-600 to-indigo-600 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
           >
@@ -32,12 +39,10 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
               <div className="bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto">
                 <FiAlertCircle />
               </div>
-              <h3 className="text-3xl font-bold text-center mb-2">
-                One more thing!
-              </h3>
+              <h3 className="text-3xl font-bold text-center mb-2">One more thing!</h3>
               <p className="text-center mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                aperiam vitae, sapiente ducimus eveniet in velit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aperiam vitae, sapiente ducimus eveniet in
+                velit.
               </p>
               <div className="flex gap-2">
                 <button
@@ -59,6 +64,12 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
       )}
     </AnimatePresence>
   );
+};
+
+SpringModal.propTypes = {
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func.isRequired,
+  handleCloseModal: PropTypes.func.isRequired,
 };
 
 export default SpringModal;
