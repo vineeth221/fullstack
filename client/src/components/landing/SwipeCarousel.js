@@ -72,7 +72,7 @@ const SPRING_OPTIONS = {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing md:h-[100vh] sm:h-[50vh] lg:h-[100vh]"
+        className="flex cursor-grab items-center active:cursor-grabbing"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>

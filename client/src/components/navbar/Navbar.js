@@ -4,10 +4,17 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
 import Logo from "../../components/navbar/icons/logo.png";
+import { FiArrowRight } from "react-icons/fi";
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/index", current: true },
-  { name: "About Us", href: "#", current: false },
+  { name: "About Us", href: "/about", current: false },
   { name: "Blogs", href: "#", current: false },
 ];
 
@@ -16,9 +23,13 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const COLORS_TOP = ["#1E67C6", "#CE84CF", "#DD335C"];
+  const color = useMotionValue(COLORS_TOP[0]);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
   const [sticky, setIsSticky] = useState(false);
+  const border = useMotionTemplate`1px solid ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,12 +118,22 @@ export default function Navbar() {
                   </div>
                 </div>
                 <Link to="/contact">
-                  <button
-                    type="button"
-                    className="hidden md:block lg:block myBtn third"
+                  <motion.button
+                    style={{
+                      border,
+                      boxShadow,
+                    }}
+                    whileHover={{
+                      scale: 1.015,
+                    }}
+                    whileTap={{
+                      scale: 0.985,
+                    }}
+                    className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
                   >
-                    Contact Us
-                  </button>
+                   Contact Us
+                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                  </motion.button>
                 </Link>
               </div>
             </div>

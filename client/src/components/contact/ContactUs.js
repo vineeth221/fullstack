@@ -11,8 +11,17 @@ import Footer from '../../components/landing/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import Spinner from 'react-bootstrap/Spinner';
 import Loader from '../loader/Loader';
+import { FiArrowRight } from "react-icons/fi";
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
 
 const ContactUs = () => {
+  const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+  const color = useMotionValue(COLORS_TOP[0]);
   const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
   const [subject, setSubject] = useState('');
@@ -25,17 +34,20 @@ const ContactUs = () => {
   const dispatch = useDispatch();
   const notifications = useSelector((state) => state.email.notifications);
   const sendEmailSuccessState = useSelector((state) => state.email.success);
-  const isLoading = useSelector((state) => state.email.isLoading); 
+  const isLoading = useSelector((state) => state.email.isLoading);
+  const border = useMotionTemplate`1px solid ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+
 
   useEffect(() => {
     if (formRef.current) {
       setFormHeight(formRef.current.offsetHeight);
     }
   }, [formRef]);
-  
+
   useEffect(() => {
     console.log('isLoading:', isLoading);
-  }, [isLoading]); 
+  }, [isLoading]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -87,7 +99,7 @@ const ContactUs = () => {
       smsError.subject = "Subject should be min 5 and max 300 characters";
     }
     return smsError;
-  };  
+  };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -95,9 +107,9 @@ const ContactUs = () => {
     const smsError = validation(payload);
     if (Object.keys(smsError).length > 0) {
       const firstErrorKey = Object.keys(smsError)[0];
-      const firstErrorMessage = smsError[firstErrorKey]; 
+      const firstErrorMessage = smsError[firstErrorKey];
       dispatch(addNotification(generateRandomNotif(firstErrorMessage, 3)));
-      return; 
+      return;
     }
     encryptButtonHandler();
   };
@@ -135,11 +147,11 @@ const ContactUs = () => {
         <>
           <Navbar />
           {isSmallScreen ? (
-        <div className='small-sub-space' />
-      ) : (
-        <div className='small-space' />
-      )}
-          <div className="min-h-screen flex flex-col justify-center items-center px-4">
+            <div className='small-sub-space' />
+          ) : (
+            <div className='small-space' />
+          )}
+          <div className="flex flex-col justify-center items-center px-4">
             <ToastContainer position="top-right" />
             <div className="flex justify-center items-start w-full">
               <div ref={formRef} className="w-full max-w-md p-8 bg-white rounded-lg shadow-md form-clr">
@@ -161,15 +173,23 @@ const ContactUs = () => {
                     <label htmlFor="message" className="text-2xl text-white">I'd love to ask about...</label>
                     <textarea id="message" placeholder="Whatever your heart desires :)" name="message" value={subject} onChange={(e) => setSubject(e.target.value)} rows="4" className='bg-indigo-700 w-full mt-2 rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white'></textarea>
                   </div>
-                  <button type="submit" className='bg-white text-indigo-600 w-full rounded-lg py-3 text-center text-lg font-semibold transition-colors duration-[750ms]' disabled={isLoading}>
-                    {isLoading ? (
-                      <Spinner animation="border" role="status" className="mx-auto">
-                        <span className="visually-hidden">Loading...</span>
-                      </Spinner>
-                    ) : (
-                      "Submit"
-                    )}
-                  </button>
+                  <motion.button
+                    type="submit"
+                    style={{
+                      border,
+                      boxShadow,
+                    }}
+                    whileHover={{
+                      scale: 1.015,
+                    }}
+                    whileTap={{
+                      scale: 0.985,
+                    }}
+                    className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+                  >
+                    Join with us
+                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                  </motion.button>
                 </Form>
               </div>
             </div>
