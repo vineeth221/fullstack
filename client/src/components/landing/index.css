@@ -106,7 +106,8 @@ span.colour-text{
     height: 500px;
 }
 a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading-6 {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  line-height: 1px;
 }
 .coming-soon{
   position: relative;
