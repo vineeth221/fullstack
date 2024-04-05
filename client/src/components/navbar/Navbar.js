@@ -160,14 +160,6 @@ export default function Navbar() {
                     {item.name}
                   </Disclosure.Button>
                 ))}
-                <Link to="/contact">
-                  <div
-                    type="button"
-                    className="text-white px-3 py-2 rounded-md text-base font-medium relative border-l-4 border-transparent"
-                  >
-                    Contact Us
-                  </div>
-                </Link>
               </div>
             </Disclosure.Panel>
 
