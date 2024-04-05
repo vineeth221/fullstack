@@ -17,36 +17,52 @@ const Testimonials = () => {
         autoplay: true,
         speed: 7000,
         autoplaySpeed: 7000,
+        pauseOnHover: false, 
         cssEase: "linear",
         responsive: [
             {
                 breakpoint: 1350,
                 settings: {
                     slidesToShow: 3,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 1050,
                 settings: {
                     slidesToShow: 3,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 840,
                 settings: {
                     slidesToShow: 2,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             }
         ]
@@ -60,6 +76,7 @@ const Testimonials = () => {
         autoplay: true,
         speed: 8000,
         autoplaySpeed: 8000,
+        pauseOnHover: false, 
         cssEase: "linear",
         rtl: true, // Set to true to make the carousel move from right to left
         responsive: [
@@ -67,30 +84,45 @@ const Testimonials = () => {
                 breakpoint: 1350,
                 settings: {
                     slidesToShow: 3,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 1050,
                 settings: {
                     slidesToShow: 3,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 840,
                 settings: {
                     slidesToShow: 2,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             },
             {
                 breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
+                    speed: 7000,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false, 
                 }
             }
         ]
