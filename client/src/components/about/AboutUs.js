@@ -11,21 +11,22 @@ import {
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
+import './about.css'
 
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+const COLORS_TOP = ["#1E67C6", "#CE84CF", "#DD335C"];
 
 export const AboutUS = () => {
   const [isLoadingContent, setIsLoadingContent] = useState(true);
   const color = useMotionValue(COLORS_TOP[0]);
 
-  useEffect(() => {
-    animate(color, COLORS_TOP, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
+  // useEffect(() => {
+  //   animate(color, COLORS_TOP, {
+  //     ease: "easeInOut",
+  //     duration: 10,
+  //     repeat: Infinity,
+  //     repeatType: "mirror",
+  //   });
+  // }, []);
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingContent(false);
@@ -44,10 +45,10 @@ export const AboutUS = () => {
         <>
           <Navbar />
     <motion.section
-      style={{
-        backgroundImage,
-      }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+     style={{
+      backgroundImage,
+    }}
+      className="relative grid place-content-center overflow-hidden bg-gray-950 text-gray-200 manual-hght"
     >
       <div className="relative z-10 flex flex-col items-center">
         <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
@@ -78,11 +79,11 @@ export const AboutUS = () => {
         </motion.button>
       </div>
 
-      {/* <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
         </Canvas>
-      </div> */}
+      </div>
     </motion.section>
     <Footer />
     </>
