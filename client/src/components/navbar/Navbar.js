@@ -55,6 +55,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <Disclosure
       as="nav"
       className='bg-gray-800 fixed w-full transition-all duration-500 ease-in-out nav-top'
@@ -164,5 +165,7 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
+    <div className="custom-height" />
+    </>
   );
 }
