@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './landing/index';
 import ContactUs from './contact/ContactUs';
-// import AboutUs from './about/AboutUs';
+import AboutUs from './about/AboutUs';
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Route index element={<Index/>} />
         <Route path="/index" element={<Index />} />
         <Route path="/contact" element={<ContactUs/>} />
-        {/* <Route path="/about" element={<AboutUs/>} /> */}
+        <Route path="/about" element={<AboutUs/>} />
       </Routes>
     </Router>
   );
