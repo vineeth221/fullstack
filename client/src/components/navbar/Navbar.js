@@ -13,9 +13,9 @@ import {
 } from "framer-motion";
 
 const navigation = [
-  { name: "Home", href: "/index", current: true },
-  { name: "About Us", href: "/about", current: false },
-  { name: "Blogs", href: "#", current: false },
+  { name: "Home", href: "/index"},
+  { name: "About Us", href: "/about" },
+  { name: "Blogs", href: "#"},
 ];
 
 function classNames(...classes) {
