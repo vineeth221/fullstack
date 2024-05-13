@@ -30,8 +30,8 @@ const CountUpStats = () => {
     if (isVisible) {
       const fetchData = async () => {
         setTimeout(() => {
-          setCounts([350, 83, 200]); // Update counts with different values
-        }, 3000);
+          setCounts([350, 83, 200]);
+        });
       };
       fetchData();
     }
