@@ -9,11 +9,10 @@ import {
   useMotionTemplate,
   useMotionValue,
   motion,
-  animate,
 } from "framer-motion";
 
 const navigation = [
-  { name: "Home", href: "/index"},
+  { name: "Home", href: "/home"},
   { name: "About Us", href: "/about" },
   { name: "Blogs", href: "#"},
 ];
@@ -76,7 +75,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <Link to="/index">
+                <Link to="/home">
                   <div className="flex-shrink-0 flex items-center">
                     <img
                       className="block lg:hidden  custom-img"
@@ -88,7 +87,7 @@ export default function Navbar() {
                       src={Logo}
                       alt="Workflow"
                     />
-                    <span className="logo-text">Build Craft</span>
+                    <span className="logo-text">17 Columns</span>
                   </div>
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
