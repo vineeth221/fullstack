@@ -13,8 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
-const connectionString = "mongodb+srv://amazona-hostinger:amazona-hostinger@cluster0.uzvbjet.mongodb.net/";
-mongoose.connect(connectionString, {
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
