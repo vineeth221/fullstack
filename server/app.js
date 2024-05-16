@@ -6,7 +6,7 @@ const router = require("./routes/router");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8004;
 
 // Middleware
 app.use(express.json());
