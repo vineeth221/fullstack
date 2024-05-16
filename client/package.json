@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://43.204.231.33:8004",
+  "proxy": "http://17columns.com:5001",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
