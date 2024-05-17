@@ -13,9 +13,16 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
-mongoose.connect(`${process.env.MONGO_URL}`, {useNewUrlParser: true, useUnifiedTopology: true}, ()=>{
-  console.log("mongodb is connected")
-});
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
