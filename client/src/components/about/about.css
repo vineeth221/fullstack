@@ -1,11 +1,28 @@
-.manual-hght{
+/* .manual-hght{
     padding-top: 2rem;
     height: 520px;
-}
+} */
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+/* @media screen and (min-width: 300px) and (max-width: 600px) {
     .manual-hght {
         height: 404px;
         padding: 2rem;
     }
+} */
+
+.text-font-size{
+    font-size: 3rem;
+}
+
+.bg-aclice{
+    background-color: #f1f5f9;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .text-font-size{
+        font-size: 1.7rem;
+    }
+.text-zinc-font{
+    font-size: 1rem;
+
+}
 }

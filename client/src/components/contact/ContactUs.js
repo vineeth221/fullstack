@@ -9,6 +9,7 @@ import { sendEmail, addNotification, showModal, hideModal, startLoading, stopLoa
 import '../../components/landing/index.css';
 import Footer from '../../components/landing/Footer';
 import Navbar from '../../components/navbar/Navbar';
+import Blog from '../../components/blogs/blog';
 import Spinner from 'react-bootstrap/Spinner';
 import Loader from '../loader/Loader';
 import { FiArrowRight } from "react-icons/fi";
@@ -128,7 +129,7 @@ const ContactUs = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 600);
+      setIsSmallScreen(window.innerWidth <= 1200);
     };
 
     handleResize(); // Initial check
@@ -146,15 +147,11 @@ const ContactUs = () => {
       ) : (
         <>
           <Navbar />
-          {isSmallScreen ? (
-            <div className='small-sub-space' />
-          ) : (
-            <div className='small-space' />
-          )}
-          <div className="flex flex-col justify-center items-center px-4">
+          <div className={isSmallScreen ? 'small-sub-space' : 'small-space'} />
+          <div className="flex flex-col px-4">
             <ToastContainer position="top-right" />
-            <div className="flex justify-center items-start w-full">
-              <div ref={formRef} className="w-full max-w-md p-8 bg-white rounded-lg shadow-md form-clr">
+            <div className="flex justify-center ">
+              <div ref={formRef} className="w-full max-w-md p-8 bg-white shadow-md form-clr">
                 <h1 className="mb-6 text-3xl font-bold text-white ">Contact Us</h1>
                 <Form ref={formRef} onSubmit={handleFormSubmit} className="space-y-4">
                   <div>
@@ -192,7 +189,9 @@ const ContactUs = () => {
                   </motion.button>
                 </Form>
               </div>
+              {!isSmallScreen && <Blog />}
             </div>
+            {isSmallScreen && <Blog />}
             <SpringModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} handleCloseModal={handleCloseModal} />
             <div className="notifications-container">
               <Notifications notifications={notifications} />

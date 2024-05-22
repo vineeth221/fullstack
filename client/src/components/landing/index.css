@@ -8,6 +8,14 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+.flex.cursor-grab.items-center.active\:cursor-grabbing{
+  height:640px;
+}
+ @media screen and (min-width: 300px) and (max-width: 767px) {
+  .flex.cursor-grab.items-center.active\:cursor-grabbing{
+    height:250px;
+  }
+ }
 .text-extra-small {
     font-size: 3rem;
     font-weight: 900;
@@ -119,7 +127,7 @@ a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading
   border-radius: 20px 0px 0px 20px;
   height: 255px;
   top: -41px;
-  background: rgb(99 102 241);
+  background: #cee1f4;
   right: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
 }
@@ -197,6 +205,7 @@ a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading
   height:86px;
 }
 .autoslide-img p{
+color: #333;
  text-align: center;
  font-size: 14px;
  padding:1rem ;

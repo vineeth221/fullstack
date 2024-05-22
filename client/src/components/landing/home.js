@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../components/navbar/Navbar';
-import ShuffleHero from '../../components/landing/ShuffleHero';
-import SwipeCarousel from '../../components/landing/SwipeCarousel';
-import CountUpStats from '../../components/landing/CountUpStats';
-import Testimonials from '../../components/landing/Testimonials';
+import Navbar from '../navbar/Navbar';
+import ShuffleHero from './ShuffleHero';
+import SwipeCarousel from './SwipeCarousel';
+import CountUpStats from './CountUpStats';
+import Testimonials from './Testimonials';
 // import VideoPlayer from '../../components/landing/VideoPlayer';
-import Footer from '../../components/landing/Footer';
+import Footer from './Footer';
 import Loader from '../loader/Loader';
 import './index.css';
 
-const Index = () => {
+const Home = () => {
   const [isLoadingContent, setIsLoadingContent] = useState(true);
 
   useEffect(() => {
@@ -41,4 +41,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
