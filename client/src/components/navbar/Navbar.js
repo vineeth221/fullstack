@@ -87,7 +87,7 @@ export default function Navbar() {
                       src={Logo}
                       alt="Workflow"
                     />
-                    <span className="logo-text">17 Columns</span>
+                    {/* <span className="logo-text">17 Columns</span> */}
                   </div>
                 </Link>
                 <div className="hidden sm:block sm:ml-6">

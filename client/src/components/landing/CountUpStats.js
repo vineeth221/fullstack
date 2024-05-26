@@ -42,7 +42,7 @@ const CountUpStats = () => {
       <div className="small-space" />
       <div className="main-heading text-center">
         <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl">
-          We design stunning interiors tailored to your style
+        17 Columns is your perfect find to build your bespoke home just your way!
         </p>
       </div>
       <div className="small-space" />
@@ -67,9 +67,9 @@ const CountUpStats = () => {
                 )}
               </div>
               <p className="custom-text text-sm sm:text-base">
-                {index === 0 && "Happy Customers"}
-                {index === 1 && " Satisfied Customers"}
-                {index === 2 && "Customer Retention Rate"}
+                {index === 0 && "50+ Happy Homes Delivered"}
+                {index === 1 && "100% Happy Families"}
+                {index === 2 && "More Happiness under construction"}
               </p>
             </div>
           ))}

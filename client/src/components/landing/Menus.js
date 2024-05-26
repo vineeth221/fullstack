@@ -1,5 +1,5 @@
 export const PRODUCTS = [
-    { name: "CHARCHIKA INFRASTRUCTURE DEVELOPMENT PRIVATE LIMITED Registered Office Address :- 3rd Floor, 87 Anugraha Building , 7th B Cross Road Koramangala 4th Block Bangalore - 560034", link: "#" },
+    { name: "7th Floor, Awfis, Mantri Commerce Bannerghatta Road, BTM 2nd Stage Bangalore – 560076", link: "#" },
   ];
 //   export const COMPANY = [
 //     { name: "Diversity & inclusion", link: "#" },

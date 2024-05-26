@@ -65,9 +65,9 @@ const HeaderBlock = () => (
       className="mb-4 size-14 rounded-full"
     />
     <h1 className="mb-12 text-font-size font-medium leading-tight">
-      Hi, I'm Vineeth.{" "}
+    Transforming Visions &nbsp; 
       <span className="text-zinc-400">
-        I build cool websites like this.
+      into Reality.
       </span>
     </h1>
     <a
@@ -179,11 +179,12 @@ const EmailListBlock = () => (
 const AboutBlock = () => (
     <Block className="col-span-12 text-zinc-font text-2xl leading-snug">
       <p>
-        My passion is building cool stuff.{" "}
-        <span className="text-zinc-400">
-          I build primarily with React, Tailwind CSS, and Framer Motion. I love
-          this stack so much that I even built a website about it. I've made over
-          a hundred videos on the subject across YouTube and TikTok.
+      Your Trusted Partner in Design and Construction. &nbsp;
+         <span className="text-zinc-400">
+        we specialize in turning your dreams into tangible structures. 
+        With our team of skilled architects, engineers, and craftsmen, 
+        we bring innovation and expertise to every project, ensuring
+        that your vision is not just realized, but surpassed.
         </span>
       </p>
     </Block>

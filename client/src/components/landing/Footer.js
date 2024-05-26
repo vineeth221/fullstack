@@ -104,11 +104,11 @@ const Footer = () => {
                     </div>
                     <div className="autoslide-img">
                         <img src={vizag} alt="Vizag" style={grayscaleStyle} />
-                        <p>Udipi</p>
+                        <p>Mangalore</p>
                     </div>
                     <div className="autoslide-img">
                         <img src={kochi} alt="Kochi" style={grayscaleStyle} />
-                        <p>Vijayapura</p>
+                        <p>Amaravathi</p>
                     </div>
                 </Slider>
             </div>
