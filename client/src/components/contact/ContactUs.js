@@ -21,7 +21,7 @@ import {
 } from "framer-motion";
 
 const ContactUs = () => {
-  const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+  const COLORS_TOP = ["#2f73a1", "#2f73a1", "#2f73a1", "#2f73a1"];
   const color = useMotionValue(COLORS_TOP[0]);
   const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
@@ -156,19 +156,19 @@ const ContactUs = () => {
                 <Form ref={formRef} onSubmit={handleFormSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="name" className="text-white text-2xl">Hi 👋! My name is...</label>
-                    <input type="text" id="name" name="name" placeholder="My Name is..." className='bg-indigo-700 w-full rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white mt-2' value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" id="name" name="name" placeholder="My Name is..." className='form-input-clr w-full rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white mt-2' value={name} onChange={(e) => setName(e.target.value)} />
                   </div>
                   <div>
                     <label htmlFor="phone" className="text-white mb-4 text-2xl">My Phone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="My Phone..." value={mobile} onChange={(e) => setMobile(e.target.value)} className='bg-indigo-700 w-full rounded-md mt-2 p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white' />
+                    <input type="tel" id="phone" name="phone" placeholder="My Phone..." value={mobile} onChange={(e) => setMobile(e.target.value)} className='form-input-clr w-full rounded-md mt-2 p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white' />
                   </div>
                   <div>
                     <label htmlFor="email" className="text-2xl text-white">My Email</label>
-                    <input type="text" id="email" name="email" placeholder="My Email..." value={email} onChange={(e) => setEmail(e.target.value)} className='bg-indigo-700 w-full rounded-md mt-2 p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white' />
+                    <input type="text" id="email" name="email" placeholder="My Email..." value={email} onChange={(e) => setEmail(e.target.value)} className='form-input-clr w-full rounded-md mt-2 p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white' />
                   </div>
                   <div>
                     <label htmlFor="message" className="text-2xl text-white">I'd love to ask about...</label>
-                    <textarea id="message" placeholder="Whatever your heart desires :)" name="message" value={subject} onChange={(e) => setSubject(e.target.value)} rows="4" className='bg-indigo-700 w-full mt-2 rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white'></textarea>
+                    <textarea id="message" placeholder="Whatever your heart desires :)" name="message" value={subject} onChange={(e) => setSubject(e.target.value)} rows="4" className='form-input-clr w-full mt-2 rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white'></textarea>
                   </div>
                   <motion.button
                     type="submit"

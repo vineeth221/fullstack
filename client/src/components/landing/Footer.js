@@ -25,7 +25,7 @@ const Footer = () => {
         };
     }, []);
     const grayscaleStyle = {
-        filter: "hue-rotate(17deg)",
+        filter: "hue-rotate(338deg)",
     };
 
     const carouselSettings = {
@@ -104,11 +104,11 @@ const Footer = () => {
                     </div>
                     <div className="autoslide-img">
                         <img src={vizag} alt="Vizag" style={grayscaleStyle} />
-                        <p>Mangalore</p>
+                        <p>Amaravathi</p>
                     </div>
                     <div className="autoslide-img">
                         <img src={kochi} alt="Kochi" style={grayscaleStyle} />
-                        <p>Amaravathi</p>
+                        <p>Mangalore</p>
                     </div>
                 </Slider>
             </div>
@@ -163,11 +163,11 @@ const Footer = () => {
                            </div>
                            <div className="autoslide-img-mob">
                            <img src={vizag} />
-                           <p>Udipi</p>
+                           <p>Amaravathi</p>
                            </div>
                            <div className="autoslide-img-mob">
                            <img src={kochi} />
-                           <p>Vijayapura</p>
+                           <p>Mangalore</p>
                            </div>
                         </Slider>
                         </div>

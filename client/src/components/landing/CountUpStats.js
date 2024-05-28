@@ -30,7 +30,7 @@ const CountUpStats = () => {
     if (isVisible) {
       const fetchData = async () => {
         setTimeout(() => {
-          setCounts([350, 83, 200]);
+          setCounts([50, 83, 200]);
         });
       };
       fetchData();
@@ -67,8 +67,8 @@ const CountUpStats = () => {
                 )}
               </div>
               <p className="custom-text text-sm sm:text-base">
-                {index === 0 && "50+ Happy Homes Delivered"}
-                {index === 1 && "100% Happy Families"}
+                {index === 0 && "Happy Homes Delivered"}
+                {index === 1 && "Happy Families"}
                 {index === 2 && "More Happiness under construction"}
               </p>
             </div>

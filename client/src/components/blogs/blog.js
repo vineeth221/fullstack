@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiFacebook, SiGithub, SiInstagram, SiLinkedin, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
 import '../../components/about/about.css'
+import '../landing/index.css'
 
  const Blog = () => {
   return (
@@ -49,7 +50,7 @@ const Block = ({ className, ...rest }) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+        "col-span-4 rounded-lg border border-zinc-clr bg-zinc-800 p-6",
         className
       )}
       {...rest}

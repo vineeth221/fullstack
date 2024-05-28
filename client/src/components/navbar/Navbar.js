@@ -22,7 +22,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const COLORS_TOP = ["#1E67C6", "#CE84CF", "#DD335C"];
+  const COLORS_TOP = ["#3f97d2", "#3f97d2", "#3f97d2"];
   const color = useMotionValue(COLORS_TOP[0]);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
