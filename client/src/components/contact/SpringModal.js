@@ -5,7 +5,6 @@ import { FiAlertCircle } from 'react-icons/fi';
 const SpringModal = ({ isOpen, setIsOpen, handleCloseModal }) => {
   const closeModal = () => {
     if (typeof setIsOpen !== 'function') {
-      console.error('setIsOpen is not a function:', setIsOpen);
       return;
     }
     setIsOpen(false);
@@ -15,7 +14,6 @@ const SpringModal = ({ isOpen, setIsOpen, handleCloseModal }) => {
   const handleContentClick = (e) => {
     e.stopPropagation();
   };
-  console.log('isOpen:', isOpen);
 
   return (
     <AnimatePresence>
