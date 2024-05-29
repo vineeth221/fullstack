@@ -150,7 +150,7 @@ const ContactUs = () => {
           <div className={isSmallScreen ? 'small-sub-space' : 'small-space'} />
           <div className="flex flex-col px-4">
             <ToastContainer position="top-right" />
-            <div className="flex justify-center" style={{padding:"2rem"}}>
+            <div className="flex justify-center" style={{padding:"1rem"}}>
               <div ref={formRef} className="w-full max-w-md p-8 bg-white shadow-md form-clr">
                 <h1 className="mb-6 text-3xl font-bold text-white ">Contact Us</h1>
                 <Form ref={formRef} onSubmit={handleFormSubmit} className="space-y-4">
