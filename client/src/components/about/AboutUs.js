@@ -11,6 +11,7 @@ import {
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
+import NewBlog from '../../components/blogs/newBlog';
 
 // const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 const COLORS_TOP = ["#3f97d2"];
@@ -103,20 +104,14 @@ export const AboutUS = () => {
               <p className="mb-4 md:text-xl">
               Our vision is to become the go-to house construction and home interiors brand that helps every Indian gift their dream home to their families with great aesthetics and quality. We aspire to set new benchmarks in the residential construction industry by seamlessly blending innovative design, cutting-edge technology, and top-notch craftsmanship. By doing so, we aim to transform the way people perceive home building, making it an enjoyable and stress-free experience.
               </p>
-              <p className="mb-4 md:text-xl">
-              At 17 Columns, we envision a future where every family can afford a beautifully designed, high-quality home that meets their unique needs and preferences. We are committed to continuously evolving and adapting our services to exceed our clients' expectations, ensuring that each project we undertake contributes to our legacy of excellence and innovation in the housing industry.
-              </p>
               <h3 className="md:text-4xl sm:text-3xl text-2xl mb-4"><span style={{color:"#3f97d2"}}>Mission</span></h3>
               <p className="mb-4 mb-4 md:text-xl">
               We aim to ensure that home aspirants no longer fall victim to market traps and that every home is built with exceptional design and the best industry quality. Our mission is to provide a transparent and trustworthy construction process, where clients are fully informed and involved at every stage. By prioritizing customer satisfaction and maintaining open communication, we strive to eliminate the uncertainties and frustrations commonly associated with home construction.
               </p>
-              <p className="mb-4 mb-4 md:text-xl">
-              Furthermore, we are dedicated to using sustainable building practices and eco-friendly materials, ensuring that our homes are not only beautiful and durable but also environmentally responsible. Through our commitment to quality, innovation, and customer-centric service, we aim to set a new standard in the housing industry, empowering individuals and families to achieve their dream homes without compromise.
-              </p>
             </div>
             </div>
           </section>
-
+          <NewBlog/>
           <Footer />
         </>
       )}
