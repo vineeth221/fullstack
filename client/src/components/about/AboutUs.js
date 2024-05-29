@@ -85,7 +85,7 @@ export const AboutUS = () => {
             </div>
           </motion.section>
 
-          <section className=" px-4 py-24">
+          <section className=" px-4 py-12">
             <div className="container mx-auto">
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{color:"#3f97d2"}}>About Us ?</span></h2>
               <p className="mb-4 md:text-xl">
@@ -98,7 +98,7 @@ export const AboutUS = () => {
               At 17 Columns, we believe that a beautiful home need not be expensive. Our focus on delivering high-quality designs at the right cost without compromising quality sets us apart in the industry. We are dedicated to making your dream home a reality, one that reflects your personality and style, ensuring lasting happiness and satisfaction.
               </p>
               <div className="custom-bg-abt">
-              <h3 className="md:text-6xl sm:text-4xl text-3xl mb-6" style={{marginTop:"4rem"}}>Mission & Vision</h3>
+              <h3 className="md:text-6xl sm:text-4xl text-3xl mb-6" style={{marginTop:"3rem"}}>Mission & Vision</h3>
               <h3 className="md:text-4xl sm:text-43l text-2xl mb-4"><span style={{color:"#3f97d2"}}>Vision</span></h3>
               <p className="mb-4 md:text-xl">
               Our vision is to become the go-to house construction and home interiors brand that helps every Indian gift their dream home to their families with great aesthetics and quality. We aspire to set new benchmarks in the residential construction industry by seamlessly blending innovative design, cutting-edge technology, and top-notch craftsmanship. By doing so, we aim to transform the way people perceive home building, making it an enjoyable and stress-free experience.
