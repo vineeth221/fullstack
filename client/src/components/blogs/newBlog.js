@@ -1,31 +1,26 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
+import build11 from '../../components/navbar/icons/build11.jpeg';
+import build10 from '../../components/navbar/icons/build10.jpeg';
+import './blog.css'
 
 const NewBlog = () => {
   return (
     <div className="bg-white">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={build11}
         subheading="Collaborate"
         heading="Built for all of us."
       >
         <ExampleContent />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={build10}
         subheading="Quality"
         heading="Never compromise."
       >
         <ExampleContent1 />
       </TextParallaxContent>
-      {/* <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Modern"
-        heading="Dress for the best."
-      >
-        <ExampleContent />
-      </TextParallaxContent> */}
     </div>
   );
 };
@@ -65,12 +60,12 @@ const StickyImage = ({ imgUrl }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: `calc(80vh - ${IMG_PADDING * 2}px)`, // Adjusted height for xs screens
+        height: `calc(80vh - ${IMG_PADDING * 2}px)`, 
         top: IMG_PADDING,
         scale,
       }}
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl max-w-full sm:max-w-5xl xs:max-w-3xl sm:max-w-6xl mx-auto"
+      className="sticky z-0 overflow-hidden rounded-3xl max-w-full sm:max-w-5xl xs:max-w-3xl sm:max-w-6xl mx-auto max-height"
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"
@@ -104,7 +99,7 @@ const OverlayCopy = ({ subheading, heading }) => {
       <p className="mb-2 text-center text-xl sm:mb-4 sm:text-3xl">
         {subheading}
       </p>
-      <p className="text-center text-4xl font-bold sm:text-7xl">{heading}</p>
+      <p className="text-center text-3xl font-bold sm:text-7xl">{heading}</p>
     </motion.div>
   );
 };
@@ -112,15 +107,11 @@ const OverlayCopy = ({ subheading, heading }) => {
 const ExampleContent = () => (
   <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
-     Our Vision
+    Cast In Situ / Conventional
     </h2>
     <div className="col-span-1 sm:col-span-8">
       <p className="mb-4 text-xl text-neutral-600 sm:text-2xl">
-        At 17 Columns, we envision a future where every family can afford
-        a beautifully designed, high-quality home that meets their unique needs and preferences.
-        We are committed to continuously evolving and adapting our services to exceed our clients'
-        expectations, ensuring that each project  we undertake contributes to our
-        legacy of excellence and innovation in the housing industry.
+      This is the very simple age old technology which even a layman can understand and work on where we bring all the raw materials to the construction site and deploy manpower / labourers and build everything at the site. This does take a lot of time and standard quality  is achieved.
       </p>
     </div>
   </div>
@@ -128,16 +119,11 @@ const ExampleContent = () => (
 const ExampleContent1 = () => (
   <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
-     Our Mission
+    Pre Fabricated / Metal Frame Hybrid Method
     </h2>
     <div className="col-span-1 sm:col-span-8">
       <p className="mb-4 text-xl text-neutral-600 sm:text-2xl">
-        Furthermore, we are dedicated to using sustainable building practices
-         and eco-friendly materials, ensuring that our homes are not only beautiful 
-         and durable but also environmentally responsible. Through our commitment
-          to quality, innovation, and customer-centric service, we aim to set a new
-           standard in the housing industry, empowering individuals and families
-            to achieve their dream homes without compromise.
+      This is a technology where metal frame is constructed or deployed once the foundation is done and then the concrete is casted for the roofs and walls are build around the structure. In this method 50% of the construction time can be saved and at almost the same cost or at lesser cost with far better quality than the traditional method and the biggest advantage is the ease of renovation in the future.
       </p>
     </div>
   </div>
