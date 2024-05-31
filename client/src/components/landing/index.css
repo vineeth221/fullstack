@@ -374,3 +374,6 @@ background-color:#2f73a1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
+.to-indigo-600 {
+  background: #3f97d2;
+}

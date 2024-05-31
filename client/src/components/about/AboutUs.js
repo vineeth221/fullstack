@@ -12,7 +12,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
-import build10 from '../../components/navbar/icons/build16.jpeg';
+import build6 from '../../components/navbar/icons/build6.jpeg';
+import build5 from '../../components/navbar/icons/build11.jpeg';
+import build4 from '../../components/navbar/icons/build12.jpeg';
+import build3 from '../../components/navbar/icons/build7.jpeg';
+import build2 from '../../components/navbar/icons/build2.jpeg';
+import build1 from '../../components/navbar/icons/build1.jpeg';
+
 // import NewBlog from '../../components/blogs/newBlog';
 
 // const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
@@ -123,7 +129,7 @@ export const AboutUS = () => {
                         <span className="entry-day">04-05</span>
                         <span className="entry-month">NOV</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build1} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">
@@ -140,10 +146,10 @@ export const AboutUS = () => {
                   <div className="entry-wrapper">
                     <div className="entry-cover">
                       <h4 className="entry-time">
-                        <span className="entry-day">04-05</span>
-                        <span className="entry-month">NOV</span>
+                        <span className="entry-day">07-08</span>
+                        <span className="entry-month">Aug</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build2} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">
@@ -160,10 +166,10 @@ export const AboutUS = () => {
                   <div className="entry-wrapper">
                     <div className="entry-cover">
                       <h4 className="entry-time">
-                        <span className="entry-day">04-05</span>
-                        <span className="entry-month">NOV</span>
+                        <span className="entry-day">02-03</span>
+                        <span className="entry-month">April</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build3} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">
@@ -184,10 +190,10 @@ export const AboutUS = () => {
                   <div className="entry-wrapper">
                     <div className="entry-cover">
                       <h4 className="entry-time">
-                        <span className="entry-day">04-05</span>
-                        <span className="entry-month">NOV</span>
+                        <span className="entry-day">10-02</span>
+                        <span className="entry-month">Sep</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build4} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">
@@ -204,10 +210,10 @@ export const AboutUS = () => {
                   <div className="entry-wrapper">
                     <div className="entry-cover">
                       <h4 className="entry-time">
-                        <span className="entry-day">04-05</span>
-                        <span className="entry-month">NOV</span>
+                        <span className="entry-day">02-09</span>
+                        <span className="entry-month">May</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build5} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">
@@ -224,10 +230,10 @@ export const AboutUS = () => {
                   <div className="entry-wrapper">
                     <div className="entry-cover">
                       <h4 className="entry-time">
-                        <span className="entry-day">04-05</span>
-                        <span className="entry-month">NOV</span>
+                        <span className="entry-day">01-11</span>
+                        <span className="entry-month">Feb</span>
                       </h4>
-                      <a href="#"><img src={build10} alt="Midwifery 2024" /></a>
+                      <a href="#"><img src={build6} alt="Midwifery 2024" /></a>
                     </div>
                     <div className="entry-content-wrap">
                       <div className="entry-header">

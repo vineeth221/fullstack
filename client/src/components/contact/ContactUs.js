@@ -159,7 +159,7 @@ const ContactUs = () => {
                     <input type="text" id="name" name="name" placeholder="My Name is..." className='form-input-clr w-full rounded-md p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white mt-2' value={name} onChange={(e) => setName(e.target.value)} />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="text-white mb-4 text-2xl">My Phone</label>
+                    <label htmlFor="phone" className="text-white text-2xl">My Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="My Phone..." value={mobile} onChange={(e) => setMobile(e.target.value)} className='form-input-clr w-full rounded-md mt-2 p-2 placeholder-white/70 transition-colors duration-[750ms] focus:outline-0 text-white' />
                   </div>
                   <div>
