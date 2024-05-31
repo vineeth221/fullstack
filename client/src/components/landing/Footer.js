@@ -149,7 +149,7 @@ const Footer = () => {
                 >
                     
                     <div className="card-container">
-                        <div className="card">
+                        <div className="carder">
                           <div className="coming-card-title" />
                         <div className="carousal-icon">
                           <Slider {...carouselSettings1}>
@@ -178,13 +178,13 @@ const Footer = () => {
                  </>
                  )}
                 <div
-                    className="grid gap-10 text-center pt-2 text-gray-400 text-sm pb-8"
+                    className="grid gap-10 text-center text-gray-400 text-sm"
                     style={{ fontSize: "1.2rem", fontWeight: 600, borderTop: "1px solid rgb(55 65 81)", padding: "1.5rem" }}
                 >
                     <p>Follow us : <div style={{ padding: '1rem' }} ><SocialIcons Icons={Icons} /></div></p>
                 </div>
                 <div
-                    className="grid  gap-10 text-center pt-2 text-gray-400 text-sm pb-8"
+                    className="grid  gap-10 text-center text-gray-400 text-sm "
                     style={{ fontSize: "1.2rem", fontWeight: 600, borderTop: "1px solid rgb(55 65 81)", padding: "2rem" }}
                 >
                     <span>All Rights Reserved © 2024 Build Craft Pvt Ltd</span>
