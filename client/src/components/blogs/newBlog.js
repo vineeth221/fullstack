@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import build11 from '../../components/navbar/icons/build11.jpeg';
-import build10 from '../../components/navbar/icons/build10.jpeg';
+import build10 from '../../components/navbar/icons/build16.jpeg';
 import './blog.css'
 
 const NewBlog = () => {
@@ -105,7 +105,7 @@ const OverlayCopy = ({ subheading, heading }) => {
 };
 
 const ExampleContent = () => (
-  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 sm:grid-cols-12">
+  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
     Cast In Situ / Conventional
     </h2>
@@ -117,7 +117,7 @@ const ExampleContent = () => (
   </div>
 );
 const ExampleContent1 = () => (
-  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 sm:grid-cols-12">
+  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
     Pre Fabricated / Metal Frame Hybrid Method
     </h2>

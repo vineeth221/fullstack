@@ -140,7 +140,6 @@ const Testimonials = () => {
             </div>
         <div className="small-space" />
         <NewBlog/>
-            <div className="small-space" />
             <div className="main-heading text-center">
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
                    Our Valued Clients

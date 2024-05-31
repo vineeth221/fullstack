@@ -265,3 +265,112 @@ background-color:#2f73a1;
   transition: width 0.3s ease; 
   border-radius: 50px;
 }
+.entry-wrapper {
+  width: 340px;
+}
+.blog-posts .entry-cover {
+  position: relative;
+  overflow: hidden;
+}
+.blog-posts .entry-cover a:before {
+  height: 1px;
+  width: 30px;
+  margin-top: -1px;
+  margin-left: -15px;
+}
+.blog-posts .entry-content-wrap {
+  padding: 25px 30px 25px 30px;
+  background: #f2f4f8;
+  position: relative;
+}
+.blog-posts .entry-header .entry-title {
+  font-size: 18px;
+  height: 90px;
+}
+.blog-posts .entry-header .entry-title {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 78px;
+}
+.blog-posts .entry-footer {
+  margin-top: 15px;
+}
+.blog-posts .entry-footer .entry-meta {
+  color: #b9c1cf;
+}
+.blog-posts .entry-footer .entry-meta .entry-author {
+  margin-right: 5px;
+}
+.blog-posts .entry-cover .entry-time {
+  position: absolute;
+  width: max-content;
+  height: 60px;
+  background-color: #15416e;
+  top: 0;
+  left: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  z-index: 9;
+  margin: 0;
+  text-align: center;
+  padding: 0px 6px;
+  font-size: 18px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.blog-posts .entry-cover .entry-time span.entry-day {
+  font-size: 22px;
+  margin-top: 7px;
+}
+
+.blog-posts .entry-cover .entry-time span {
+  display: block;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.blog-posts .entry-cover .entry-time span {
+  display: block;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.blog-posts .entry-cover .entry-time {
+  position: absolute;
+  width: max-content;
+  height: 60px;
+  background-color: #3f97d2;
+  top: 0;
+  left: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  z-index: 9;
+  margin: 0;
+  text-align: center;
+  padding: 0px 6px;
+  font-size: 18px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-posts .entry-content-wrap:after {
+  width: 60px;
+  height: 5px;
+  background-color: #3f97d2;
+  content: "";
+  top: 0;
+  left: 30px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-posts .entry-content-wrap:hover:after {
+  width: 260px;
+  transition: all 0.3s ease-in-out;
+}
+.blog-posts .entry-content-wrap:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
