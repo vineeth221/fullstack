@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import photo2 from '../../components/navbar/icons/photo2.jpg';
 import photo1 from '../../components/navbar/icons/photo1.jpg';
 import './index.css';
+import NewBlog from "../blogs/newBlog";
 
 const Testimonials = () => {
 
@@ -130,6 +131,15 @@ const Testimonials = () => {
 
     return (
         <>
+        <div className="small-space" />
+         <div className="main-heading text-center">
+                <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
+                   Platform Showcase
+                </p>
+            <div className="underline"/>
+            </div>
+        <div className="small-space" />
+        <NewBlog/>
             <div className="small-space" />
             <div className="main-heading text-center">
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">

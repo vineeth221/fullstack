@@ -111,7 +111,7 @@ export const AboutUS = () => {
             </div>
             </div>
           </section>
-          <NewBlog/>
+          {/* <NewBlog/> */}
           <Footer />
         </>
       )}

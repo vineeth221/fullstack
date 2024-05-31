@@ -49,7 +49,7 @@
 
 .main-heading p {
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
     line-height:34px;
     color: #1f2937;
     font-size: 2rem;
@@ -243,4 +243,25 @@ background-color:#2f73a1;
 }
 .hover\:bg-teal-500:hover{
   background-color:#3f97d2;
+}
+.underline {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  width: 10%;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  transition: width 0.3s ease; 
+  border-radius: 50px;
 }
