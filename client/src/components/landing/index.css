@@ -96,6 +96,7 @@ color: #3f97d2;
   }
   .autoslideImg img{
     border-radius: .5rem 0 0 .5rem;
+    width:50%;
   }
   .autoslideImg p{
    color: #CBD5E1;
@@ -376,4 +377,108 @@ background-color:#2f73a1;
 }
 .to-indigo-600 {
   background: #3f97d2;
+}
+
+.speakers {
+  transition: .4s;
+  border: 1px solid #dee2e6;
+  flex-direction: column;
+  border-radius: 6px;
+  border-top: 5px solid #3f97d2;
+  box-shadow: 0 0 10px #cbcbcb;
+}
+.spk-img {
+  background: #fff;
+  padding-bottom: 15px;
+}
+.speakers{
+  text-align: center;
+}
+ .spk-info {
+  text-align: center;
+  padding: 10px 6px 38px;
+}
+ .spk-info p {
+  font-size: 11px;
+  margin-bottom: 0;
+  color: #656565;
+}
+.spk-img img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-top: -50px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #aeaeae;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+ .ocm-margin {
+  margin: 50px 0;
+}
+.reg-btn {
+  background-image: linear-gradient(73.1deg, #3f97d2 8%, #076eb3 86.9%);
+  margin-left: 3px;
+  color: #fff;
+  border-radius: 28px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  animation: 1s linear infinite blink;
+}
+.reg-btn, .sub-btn {
+  box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.moreinfo-btn {
+  position: relative;
+  bottom: -18px;
+  width: calc(100% - 0px);
+}
+.speakers:hover {
+  border: 1px solid #3f97d2;
+  background: #3f97d2;
+}
+.speakers:hover .spk-info p{
+  color: #fff;
+}
+.speakers:hover .spk-info h3{
+  color: #fff;
+}
+.speakers:hover .moreinfo-btn a {
+  background: linear-gradient(to right, #0c145a 9%, #0059a6 56%, #0c145a 100%);
+ }
+ .speakers .spk-info h3 {
+  color: #3f97d2;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 5px !important;
+  transition: .4s;
+ }
+ .centered-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.custom-close-btn {
+  background-color: #5a5a5a;
+  border-color: #5a5a5a;
+  color: #fff;
+}
+
+.custom-close-btn:hover {
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
+  color: #fff;
+}
+
+ @media (min-width: 1280px) {
+  .container {
+      max-width: 1140px;
+  }
 }
