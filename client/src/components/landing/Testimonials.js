@@ -129,7 +129,7 @@ const Testimonials = () => {
             </div>
             <div className="small-space" />
             <Container>
-                <Row >
+                <Row  className="p-4">
                     {testimonials.map((testimonial, index) => (
                         <Col xl={3} lg={3} sm={12} md={4} className="ocm-margin" key={index}>
                             <div className="speakers">
@@ -156,20 +156,29 @@ const Testimonials = () => {
             </Container>
 
             <Modal show={modalShow} onHide={() => setModalShow(false)} centered>
-                <Modal.Header closeButton>
-                    <Modal.Title>{modalContent.name}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <div className="text-center">
-                    <img src={modalContent.img} alt={modalContent.name} className="img-fluid mb-3 centered-img" />
-                    <h4>{modalContent.position}</h4>
-                    <p>{modalContent.testimonial}</p>
+            <div className="fixed inset-0 flex justify-center items-center z-50">
+                <div className="bg-gradient-to-r from-[#3f97d2] to-white rounded-lg overflow-hidden shadow-xl max-w-md w-full mx-4 md:mx-0">
+                    <div className="flex justify-between items-center p-4 border-b border-gray-200">
+                        <h3 className="text-lg font-medium text-gray-900">{modalContent.name}</h3>
+                        <button className="text-gray-900 hover:text-gray-700 focus:outline-none" onClick={() => setModalShow(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                     </div>
-                    </Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" className="custom-close-btn" onClick={() => setModalShow(false)}>Close</Button>
-                </Modal.Footer>
-            </Modal>
+            <div className="p-4 text-center">
+                <img src={modalContent.img} alt={modalContent.name} className="mx-auto mb-4 rounded-lg shadow-lg border-4 border-white" />
+                <h4 className="text-xl font-semibold text-gray-900">{modalContent.position}</h4>
+                <p className="mt-2 text-gray-700">{modalContent.testimonial}</p>
+            </div>
+            <div className="flex justify-end p-4 border-t border-gray-200">
+                <button className="px-4 py-2 bg-[#3f97d2] text-white rounded hover:bg-[#1d6ea8] focus:outline-none" onClick={() => setModalShow(false)}>Close</button>
+            </div>
+        </div>
+    </div>
+</Modal>
+
+
 
             {/* Commented out slider and other sections as per your original code */}
             {/* <div className="small-space" />
