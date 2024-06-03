@@ -177,9 +177,6 @@ const Testimonials = () => {
         </div>
     </div>
 </Modal>
-
-
-
             {/* Commented out slider and other sections as per your original code */}
             {/* <div className="small-space" />
             <div className="main-heading text-center">

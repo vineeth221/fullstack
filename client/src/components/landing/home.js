@@ -8,6 +8,7 @@ import Testimonials from './Testimonials';
 // import VideoPlayer from '../../components/landing/VideoPlayer';
 import Footer from './Footer';
 import Loader from '../loader/Loader';
+import WhatsAppIcon from './WhatsAppIcon';
 import './index.css';
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
             <SwipeCarousel />
             <CountUpStats />
             <ShuffleHero />
+            <WhatsAppIcon />
             {/* <VideoPlayer /> */}
             {/* <ConstructionCalculator /> */}
             <Testimonials />
