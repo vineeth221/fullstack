@@ -479,10 +479,10 @@ background-color:#2f73a1;
 }
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 10px;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  left: 20px;
   background-color: #25d366;
   color: white;
   border-radius: 50px;
@@ -494,6 +494,22 @@ background-color:#2f73a1;
   justify-content: center;
 }
 
+.tawk-badge {
+  height: 1.25rem;
+  width: 1.25rem;
+  font-size: .687rem;
+  line-height: 1.25rem;
+  background: #bf1212;
+  color: #fff;
+  border-radius: 50%;
+}
+.tawk-badge.tawk-min-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+}
+
 .whatsapp-icon {
   font-size: 30px;
 }
@@ -501,22 +517,5 @@ background-color:#2f73a1;
  @media (min-width: 300px) {
   .container {
       max-width: 1140px;
-  }
-
-  .whatsapp-float {
-    position: fixed;
-    width: 45px;
-    height: 45px;
-    bottom: 10px;
-    right: 10px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
