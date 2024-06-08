@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { FiArrowRight } from "react-icons/fi";
 import Image1 from '../../components/navbar/icons/building.jpg';
 import {
@@ -9,7 +7,6 @@ import {
   motion,
   animate,
 } from "framer-motion";
-import { Container, Row, Col } from 'react-bootstrap';
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
@@ -51,11 +48,30 @@ export const Construction = () => {
             <img src={Image1} alt="17Columns Construction and Interiors" className="background-image" />
             <div className="overlay">
               <div className="overlay-content">
-                <h1>17Columns Construction and Interiors</h1>
-                <p>Your trusted partner in building and design excellence</p>
-                <button className="learn-more-btn">
-                  Learn More <FiArrowRight />
-                </button>
+            <div className="relative z-10 flex flex-col items-center">
+              <h1 className="max-w-4xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-2xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
+                Construct Your Dream Home.
+              </h1>
+              <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
+               800+ families trusted us with building their homes
+              </p>
+              <motion.button
+                style={{
+                  border,
+                  boxShadow,
+                }}
+                whileHover={{
+                  scale: 1.015,
+                }}
+                whileTap={{
+                  scale: 0.985,
+                }}
+                className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+              >
+                Learn More
+                <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+              </motion.button>
+              </div>
               </div>
             </div>
           </div>
