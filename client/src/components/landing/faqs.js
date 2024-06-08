@@ -20,10 +20,11 @@ const Faqs = () => {
     return (
         <>
             <div className="small-space" />
-            <div className='about-area about4'>
-                <h2 class="text-center">FAQs
+            <div className='about-area'>
+            <div className=' about4'>
+                <h2 class="text-center pt-5">FAQs
                 </h2>
-            </div>
+                </div>
             <div className="small-space" />
             <div id="faq-container">
                 <div className="faq-item">
@@ -39,12 +40,12 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-2', 'head-2')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>2. Is Brick &amp; Bolt an authentic company?</div>
+                        <div style={{ maxWidth: '90%' }}>2. Is 17 Columns an authentic company?</div>
                         <img id="head-2" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-2') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-2') && (
                         <p id="ans-2" className="faq-item-ans">
-                            Yes, 17 Columns is an authentic company registered as Pluckwalk Technologies Pvt. Ltd. It currently employs over 300 people and has been recognized for its achievements in Forbes India, The Economic Times, etc.
+                            Yes, 17 Columns is an authentic company registered as Build Craft Pvt. Ltd. It currently employs over 300 people and has been recognized for its achievements in Forbes India, The Economic Times, etc.
                         </p>
                     )}
                 </div>
@@ -114,6 +115,7 @@ const Faqs = () => {
                         </p>
                     )}
                 </div>
+            </div>
             </div>
         </>
     );
