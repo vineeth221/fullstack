@@ -96,8 +96,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 7,
                     slidesToScroll: 1,
-                    speed: 3000,
-                    autoplaySpeed: 3000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -106,8 +106,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -116,8 +116,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -126,8 +126,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -136,8 +136,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             }
@@ -160,8 +160,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 7,
                     slidesToScroll: 1,
-                    speed: 3000,
-                    autoplaySpeed: 3000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -170,8 +170,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -180,8 +180,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -190,8 +190,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             },
@@ -200,8 +200,8 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
-                    speed: 7000,
-                    autoplaySpeed: 7000,
+                    speed: 5000,
+                    autoplaySpeed: 0,
                     pauseOnHover: false,
                 }
             }
@@ -271,9 +271,8 @@ const Testimonials = () => {
             <div className="small-space" />
             <div className="main-heading text-center">
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
-                Our Trusted Brands
+                Our Associate Partners
                 </p>
-                <span className="colour-text" style={{ fontSize: "1.2rem", fontWeight: "700" }}>Brands we use in our construction projects</span>
             </div>
             <div className="small-space" />
             <Slider {...settings}>
