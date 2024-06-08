@@ -4,6 +4,7 @@ import Home from './landing/home';
 import ContactUs from './contact/ContactUs';
 import Blog from './blogs/blog';
 import AboutUs from './about/AboutUs';
+import Construction from './construction/Construction';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUs/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/about" element={<AboutUs/>} />
+        <Route path="/construction" element={<Construction/>} />
       </Routes>
     </Router>
   );

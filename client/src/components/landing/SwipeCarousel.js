@@ -7,10 +7,10 @@ import kitchen from '../../components/navbar/icons/kitchen.jpg';
 
 
 const imgs = [
-  Image1,
-  interior,
+  // Image1,
   sofa,
-  kitchen
+  kitchen,
+  interior,
 ];
 
 const ONE_SECOND = 1000;

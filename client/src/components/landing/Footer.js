@@ -144,7 +144,7 @@ const Footer = () => {
                 {screenSize < 900 && (
                         <>
                 <div
-                    className="grid gap-10 text-center pt-2 text-gray-400 text-sm pb-8 centered-div"
+                    className="grid gap-10 text-center pt-4 text-gray-400 text-sm pb-8 centered-div"
                     style={{ fontSize: "1.2rem", fontWeight: 600, borderTop: "1px solid rgb(55 65 81)", padding: "1.5rem" }}
                 >
                     
