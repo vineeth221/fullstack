@@ -4,6 +4,7 @@ import ShuffleHero from './ShuffleHero';
 import SwipeCarousel from './SwipeCarousel';
 import CountUpStats from './CountUpStats';
 import Testimonials from './Testimonials';
+import Faqs from './faqs';
 // import ConstructionCalculator from './ConstructionCalculator';
 // import VideoPlayer from '../../components/landing/VideoPlayer';
 import Footer from './Footer';
@@ -37,6 +38,7 @@ const Home = () => {
             {/* <VideoPlayer /> */}
             {/* <ConstructionCalculator /> */}
             <Testimonials />
+            <Faqs/>
             <Footer />
           </div>
         </>
