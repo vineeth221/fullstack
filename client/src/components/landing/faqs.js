@@ -22,7 +22,7 @@ const Faqs = () => {
             <div className="small-space" />
             <div className='about-area'>
             <div className=' about4'>
-                <h2 class="text-center pt-5">FAQs
+                <h2 class="text-center pt-3">FAQs
                 </h2>
                 </div>
             <div className="small-space" />
@@ -40,7 +40,7 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-2', 'head-2')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>2. Is 17 Columns an authentic company?</div>
+                        <div style={{ maxWidth: '90%' }}>2. Is 17 Columns an authentic company ?</div>
                         <img id="head-2" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-2') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-2') && (
@@ -51,7 +51,7 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-3', 'head-3')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>3. Is it more expensive than a local contractor?</div>
+                        <div style={{ maxWidth: '90%' }}>3. Is it more expensive than a local contractor ?</div>
                         <img id="head-3" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-3') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-3') && (
@@ -62,7 +62,7 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-4', 'head-4')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>4. How can I track the progress of the project?</div>
+                        <div style={{ maxWidth: '90%' }}>4. How can I track the progress of the project ?</div>
                         <img id="head-4" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-4') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-4') && (
@@ -73,7 +73,7 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-5', 'head-5')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>5. How many projects have been delivered?</div>
+                        <div style={{ maxWidth: '90%' }}>5. How many projects have been delivered ?</div>
                         <img id="head-5" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-5') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-5') && (
@@ -84,7 +84,7 @@ const Faqs = () => {
                 </div>
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-6', 'head-6')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>6. Will my home be ready on time?</div>
+                        <div style={{ maxWidth: '90%' }}>6. Will my home be ready on time ?</div>
                         <img id="head-6" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-6') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-6') && (
@@ -106,7 +106,7 @@ const Faqs = () => {
       </div> */}
                 <div className="faq-item">
                     <h5 onClick={() => showAnswer('ans-8', 'head-8')} className="faq-item-heading">
-                        <div style={{ maxWidth: '90%' }}>7. How much time will it take to construct?</div>
+                        <div style={{ maxWidth: '90%' }}>7. How much time will it take to construct ?</div>
                         <img id="head-8" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-8') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                     </h5>
                     {isAnswerVisible('ans-8') && (
