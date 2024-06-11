@@ -46,11 +46,11 @@ const ConstructionCalculator = () => {
         <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md">
           <label className="block mb-2">
             Site Length (ft):
-            <input type="text" placeholder='Ex: 30' value={siteLength} onChange={(e) => setSiteLength(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+            <input type="text" placeholder='Ex: 30 Area(sq.ft)*' value={siteLength} onChange={(e) => setSiteLength(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
             Site Breadth (ft):
-            <input type="text" placeholder='Ex: 40' value={siteBreadth} onChange={(e) => setSiteBreadth(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+            <input type="text" placeholder='Ex: 40 Area(sq.ft)*' value={siteBreadth} onChange={(e) => setSiteBreadth(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
             Number of Floors:
