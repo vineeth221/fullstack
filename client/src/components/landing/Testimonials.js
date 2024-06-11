@@ -211,7 +211,8 @@ const Testimonials = () => {
     return (
         <div>
 
-            {/* <div className="small-space" /> */}
+            <div className="small-space" />
+            <div className="small-space" />
             {/* <NewBlog /> */}
             <div className="main-heading text-center">
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
@@ -271,7 +272,7 @@ const Testimonials = () => {
             <div className="small-space" />
             <div className="main-heading text-center">
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
-                Our Associate Partners
+                    Our Associate Partners
                 </p>
             </div>
             <div className="small-space" />

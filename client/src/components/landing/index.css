@@ -788,12 +788,13 @@ background-color:#2f73a1;
 
 .package-title {
   margin: 0;
-  color: #fff; /* custom blue */
+  font-size: 13px;
+  color: #fff;
 }
 
 .text-custom-gray {
   color: #3f97d2;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .accordion-header {
