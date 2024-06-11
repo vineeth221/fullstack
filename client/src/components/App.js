@@ -5,6 +5,8 @@ import ContactUs from './contact/ContactUs';
 import Blog from './blogs/blog';
 import AboutUs from './about/AboutUs';
 import Construction from './construction/Construction';
+// import Packages from './landing/packageSelector';
+
 
 
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/about" element={<AboutUs/>} />
         <Route path="/construction" element={<Construction/>} />
+        {/* <Route path="/packages" element={<Packages/>} /> */}
       </Routes>
     </Router>
   );

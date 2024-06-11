@@ -39,7 +39,6 @@ const ContactUs = () => {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
-
   useEffect(() => {
     if (formRef.current) {
       setFormHeight(formRef.current.offsetHeight);
@@ -150,7 +149,7 @@ const ContactUs = () => {
           <div className={isSmallScreen ? 'small-sub-space' : 'small-space'} />
           <div className="flex flex-col px-4">
             <ToastContainer position="top-right" />
-            <div className="flex justify-center" style={{padding:"1rem"}}>
+            <div className="flex justify-center" style={{ padding: "1rem" }}>
               <div ref={formRef} className="w-full max-w-md p-8 shadow-md form-clr">
                 <h1 className="mb-6 text-3xl font-bold text-white ">Contact Us</h1>
                 <Form ref={formRef} onSubmit={handleFormSubmit} className="space-y-4">
@@ -184,8 +183,14 @@ const ContactUs = () => {
                     }}
                     className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
                   >
-                    Join with us
-                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                    {isLoading ? <Spinner animation="border" role="status">
+                      <span className="sr-only">Loading...</span>
+                    </Spinner> : (
+                      <>
+                        Join with us
+                        <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                      </>
+                    )}
                   </motion.button>
                 </Form>
               </div>

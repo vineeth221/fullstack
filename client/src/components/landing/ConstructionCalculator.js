@@ -1,91 +1,118 @@
 import React, { useState } from 'react';
+import './index.css'; // Importing the custom CSS file
 
-// Calculator component
-function ConstructionCalculator() {
-  const [quantity, setQuantity] = useState(0);
-  const [pricePerUnit, setPricePerUnit] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [hourlyRate, setHourlyRate] = useState(0);
-  const [materialCost, setMaterialCost] = useState(0);
-  const [laborCost, setLaborCost] = useState(0);
-  const [totalCost, setTotalCost] = useState(0);
+const packages = [
+  {
+    name: 'Classic',
+    price: 1980,
+  },
+  {
+    name: 'Premium',
+    price: 2195,
+  },
+  {
+    name: 'Luxury',
+    price: 2295,
+  }
+];
 
-  // Function to calculate material cost based on quantity and price per unit
-  const calculateMaterialCost = () => {
-    setMaterialCost(quantity * pricePerUnit);
+const ConstructionCalculator = () => {
+  const [length, setLength] = useState('');
+  const [breadth, setBreadth] = useState('');
+  const [floors, setFloors] = useState('');
+  const [parking, setParking] = useState('');
+  const [selectedPackage, setSelectedPackage] = useState('');
+
+  const handleLengthChange = (e) => setLength(e.target.value);
+  const handleBreadthChange = (e) => setBreadth(e.target.value);
+  const handleFloorsChange = (e) => setFloors(e.target.value);
+  const handleParkingChange = (e) => setParking(e.target.value);
+  const handlePackageChange = (e) => setSelectedPackage(e.target.value);
+
+  const calculateBuiltUpArea = () => {
+    return ((length - 2.5) * (breadth - 2.5) * floors) + 200;
   };
 
-  // Function to calculate labor cost based on hours and hourly rate
-  const calculateLaborCost = () => {
-    setLaborCost(hours * hourlyRate);
+  const calculateParkingArea = () => {
+    if (parking === '1') return 250;
+    if (parking === '2') return 500;
+    if (parking === 'entire') return (length - 2.5) * (breadth - 2.5);
+    return 0;
   };
 
-  // Function to calculate total cost
   const calculateTotalCost = () => {
-    setTotalCost(materialCost + laborCost);
+    const builtUpArea = calculateBuiltUpArea();
+    const parkingArea = calculateParkingArea();
+    const packagePrice = packages.find(p => p.name === selectedPackage)?.price || 0;
+    return ((builtUpArea - parkingArea) * packagePrice) + (parkingArea * 1800);
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Construction Calculator</h2>
-      <div className="mb-4">
-        <label className="block mb-2">
-          Quantity:
+    <div className="container-normal">
+      <h2 className="title">Price Estimation Calculator</h2>
+      <div className="forms">
+        <div className="form-groups">
+          <label className="labels">Length (ft):</label>
           <input
             type="number"
-            value={quantity}
-            onChange={(e) => setQuantity(parseInt(e.target.value))}
-            className="block w-full mt-1 rounded-md border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+            className="inputs"
+            value={length}
+            onChange={handleLengthChange}
           />
-        </label>
-        <label className="block mb-2">
-          Price Per Unit:
+        </div>
+        <div className="form-groups">
+          <label className="labels">Breadth (ft):</label>
           <input
             type="number"
-            value={pricePerUnit}
-            onChange={(e) => setPricePerUnit(parseInt(e.target.value))}
-            className="block w-full mt-1 rounded-md border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+            className="inputs"
+            value={breadth}
+            onChange={handleBreadthChange}
           />
-        </label>
-        <button onClick={calculateMaterialCost} className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-          Calculate Material Cost
-        </button>
-      </div>
-      <div className="mb-4">
-        <label className="block mb-2">
-          Hours:
+        </div>
+        <div className="form-groups">
+          <label className="labels">Number of Floors:</label>
           <input
             type="number"
-            value={hours}
-            onChange={(e) => setHours(parseInt(e.target.value))}
-            className="block w-full mt-1 rounded-md border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+            className="inputs"
+            value={floors}
+            onChange={handleFloorsChange}
           />
-        </label>
-        <label className="block mb-2">
-          Hourly Rate:
-          <input
-            type="number"
-            value={hourlyRate}
-            onChange={(e) => setHourlyRate(parseInt(e.target.value))}
-            className="block w-full mt-1 rounded-md border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-          />
-        </label>
-        <button onClick={calculateLaborCost} className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-          Calculate Labor Cost
-        </button>
-      </div>
-      <div>
-        <button onClick={calculateTotalCost} className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-          Calculate Total Cost
-        </button>
-      </div>
-      <div className="mt-6">
-        <h3 className="text-lg font-semibold">Material Cost: ${materialCost}</h3>
-        <h3 className="text-lg font-semibold">Labor Cost: ${laborCost}</h3>
-        <h3 className="text-lg font-semibold">Total Cost: ${totalCost}</h3>
+        </div>
+        <div className="form-groups">
+          <label className="labels">Parking:</label>
+          <select
+            className="inputs"
+            value={parking}
+            onChange={handleParkingChange}
+          >
+            <option value="" disabled>Select Parking</option>
+            <option value="1">1 Car Park</option>
+            <option value="2">2 Car Parks</option>
+            <option value="entire">Entire Ground Floor</option>
+          </select>
+        </div>
+        <div className="form-groups">
+          <label className="labels">Package:</label>
+          <select
+            className="inputs"
+            value={selectedPackage}
+            onChange={handlePackageChange}
+          >
+            <option value="" disabled>Select Package</option>
+            {packages.map((pkg) => (
+              <option key={pkg.name} value={pkg.name}>
+                {pkg.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="result">
+          <h4 className="result-title">Estimated Total Cost:</h4>
+          <p className="result-cost">{calculateTotalCost().toLocaleString()} Rs</p>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default ConstructionCalculator;

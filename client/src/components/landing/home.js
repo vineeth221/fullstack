@@ -4,8 +4,9 @@ import ShuffleHero from './ShuffleHero';
 import SwipeCarousel from './SwipeCarousel';
 import CountUpStats from './CountUpStats';
 import Testimonials from './Testimonials';
+import PackageSelector from './packageSelector';
 import Faqs from './faqs';
-// import ConstructionCalculator from './ConstructionCalculator';
+import ConstructionCalculator from './ConstructionCalculator';
 // import VideoPlayer from '../../components/landing/VideoPlayer';
 import Footer from './Footer';
 import Loader from '../loader/Loader';
@@ -35,6 +36,7 @@ const Home = () => {
             <CountUpStats />
             <ShuffleHero />
             <WhatsAppIcon />
+            <PackageSelector/>
             {/* <VideoPlayer /> */}
             {/* <ConstructionCalculator /> */}
             <Testimonials />

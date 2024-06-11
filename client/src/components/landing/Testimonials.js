@@ -375,7 +375,7 @@ const Testimonials = () => {
                     <Row>
                         <Col>
                             <div className="small-testi">
-                                <img src={hafele} />
+                                <img src={centuryply} />
                             </div>
                         </Col>
                     </Row>
@@ -417,7 +417,7 @@ const Testimonials = () => {
                     <Row>
                         <Col>
                             <div className="small-testi">
-                                <img src={centuryply} />
+                                <img src={hafele} />
                             </div>
                         </Col>
                     </Row>
@@ -426,7 +426,7 @@ const Testimonials = () => {
                     <Row>
                         <Col>
                             <div className="small-testi">
-                                <img src={hindware} />
+                                <img src={priya} />
                             </div>
                         </Col>
                     </Row>
