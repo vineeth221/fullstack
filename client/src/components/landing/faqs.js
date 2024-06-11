@@ -19,7 +19,6 @@ const Faqs = () => {
 
     return (
         <>
-            <div className="small-space" />
             <div className='about-area'>
                 <div className=' about4'>
                     <h2 class="text-center pt-3">FAQs

@@ -134,7 +134,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Innovative Designs, Superior Quality</a>
                         </h2>
                       </div>
                     </div>
@@ -154,7 +154,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Personalized Interiors Tailored to You</a>
                         </h2>
                       </div>
                     </div>
@@ -174,7 +174,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Experience the Elegance of Italian and Modular Interiors</a>
                         </h2>
                       </div>
                     </div>
@@ -198,7 +198,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Comprehensive Interior Solutions for Every Room</a>
                         </h2>
                       </div>
                     </div>
@@ -218,7 +218,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Craftsmanship That Stands the Test of Time</a>
                         </h2>
                       </div>
                     </div>
@@ -238,7 +238,7 @@ export const AboutUS = () => {
                     <div className="entry-content-wrap">
                       <div className="entry-header">
                         <h2 className="entry-title">
-                          <a href="#">we believe that a beautiful home need not be expensive.</a>
+                          <a href="#">Illuminate Your Space with Exquisite Lighting</a>
                         </h2>
                       </div>
                     </div>

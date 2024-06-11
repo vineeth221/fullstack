@@ -11,6 +11,7 @@ import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
 import NewBlog from '../../components/blogs/newBlog';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../landing/index.css'
 
 const COLORS_TOP = ["#3f97d2"];
@@ -48,42 +49,65 @@ export const Construction = () => {
             <img src={Image1} alt="17Columns Construction and Interiors" className="background-image" />
             <div className="overlay">
               <div className="overlay-content">
-            <div className="relative z-10 flex flex-col items-center">
-              <h1 className="max-w-4xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-2xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
-                Construct Your Dream Home.
-              </h1>
-              <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-               800+ families trusted us with building their homes
-              </p>
-              <motion.button
-                style={{
-                  border,
-                  boxShadow,
-                }}
-                whileHover={{
-                  scale: 1.015,
-                }}
-                whileTap={{
-                  scale: 0.985,
-                }}
-                className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-              >
-                Learn More
-                <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-              </motion.button>
-              </div>
+                <div className="relative z-10 flex flex-col items-center">
+                  <h1 className="max-w-4xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-2xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
+                    Construct Your Dream Home.
+                  </h1>
+                  <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
+                    800+ families trusted us with building their homes
+                  </p>
+                  <motion.button
+                    style={{
+                      border,
+                      boxShadow,
+                    }}
+                    whileHover={{
+                      scale: 1.015,
+                    }}
+                    whileTap={{
+                      scale: 0.985,
+                    }}
+                    className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+                  >
+                    Learn More
+                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                  </motion.button>
+                </div>
               </div>
             </div>
           </div>
+          <section className="px-4 py-12">
+            <Container>
+            <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 
+            :</span></h2>
+              <p className="mb-4 md:text-xl">
+                17 Columns from the House Of vintage Realty is a tech driven turnkey residential
+                construction service provider who offers complete services with regards to residential
+                construction or house construction under single roof which includes Architectural Designs,
+                Structural Designs, MEP designs, Interior Designs, House Construction, Home Interiors till
+                the handover across technologies.
+              </p>
+              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> Vintage<span style={{ color: "#3f97d2" }}> homes
+                :</span></h2>
+              <p className="mb-4 md:text-xl">
+                17 Columns approach is very simple we believe in every home is unique and that uniqueness
+                is the style, feel and theme of the house should define the character of the house owner
+                and the family that is where the Architectural design comes first and then build or construct
+                the same and bring life into it with great quality and on time or simply bring the Architect’s
+                imagination into life with at most quality.
+              </p>
+
+            </Container>
+          </section>
           <div className="small-space" />
-            <div className="main-heading text-center">
-                <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
-                    Platform Showcase
-                </p>
-                <div className="underline" />
-            </div>
+          <div className="main-heading text-center">
+            <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
+              Platform Showcase
+            </p>
+            <div className="underline" />
+          </div>
           <div className="small-space" />
-          <NewBlog/>
+          <NewBlog />
           <Footer />
         </>
       )}

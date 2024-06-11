@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './index.css'; // Importing the custom CSS file
 
 const packages = [
   {
@@ -17,102 +16,55 @@ const packages = [
 ];
 
 const ConstructionCalculator = () => {
-  const [length, setLength] = useState('');
-  const [breadth, setBreadth] = useState('');
-  const [floors, setFloors] = useState('');
-  const [parking, setParking] = useState('');
-  const [selectedPackage, setSelectedPackage] = useState('');
-
-  const handleLengthChange = (e) => setLength(e.target.value);
-  const handleBreadthChange = (e) => setBreadth(e.target.value);
-  const handleFloorsChange = (e) => setFloors(e.target.value);
-  const handleParkingChange = (e) => setParking(e.target.value);
-  const handlePackageChange = (e) => setSelectedPackage(e.target.value);
-
-  const calculateBuiltUpArea = () => {
-    return ((length - 2.5) * (breadth - 2.5) * floors) + 200;
-  };
-
-  const calculateParkingArea = () => {
-    if (parking === '1') return 250;
-    if (parking === '2') return 500;
-    if (parking === 'entire') return (length - 2.5) * (breadth - 2.5);
-    return 0;
-  };
+  const [siteLength, setSiteLength] = useState('');
+  const [siteBreadth, setSiteBreadth] = useState('');
+  const [selectedPackage, setSelectedPackage] = useState(packages[0]);
+  const [totalCost, setTotalCost] = useState(0);
 
   const calculateTotalCost = () => {
-    const builtUpArea = calculateBuiltUpArea();
-    const parkingArea = calculateParkingArea();
-    const packagePrice = packages.find(p => p.name === selectedPackage)?.price || 0;
-    return ((builtUpArea - parkingArea) * packagePrice) + (parkingArea * 1800);
-  };
+    const length = parseFloat(siteLength);
+    const breadth = parseFloat(siteBreadth);
+    
+    const builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
+    const numberOfFloors = 4; // G + 3
+    const totalBuiltUpArea = (builtUpAreaPerFloor * numberOfFloors) + 200;
+
+    const cost = selectedPackage.price * totalBuiltUpArea;
+    setTotalCost(cost);
+  }
 
   return (
-    <div className="container-normal">
-      <h2 className="title">Price Estimation Calculator</h2>
-      <div className="forms">
-        <div className="form-groups">
-          <label className="labels">Length (ft):</label>
-          <input
-            type="number"
-            className="inputs"
-            value={length}
-            onChange={handleLengthChange}
-          />
-        </div>
-        <div className="form-groups">
-          <label className="labels">Breadth (ft):</label>
-          <input
-            type="number"
-            className="inputs"
-            value={breadth}
-            onChange={handleBreadthChange}
-          />
-        </div>
-        <div className="form-groups">
-          <label className="labels">Number of Floors:</label>
-          <input
-            type="number"
-            className="inputs"
-            value={floors}
-            onChange={handleFloorsChange}
-          />
-        </div>
-        <div className="form-groups">
-          <label className="labels">Parking:</label>
-          <select
-            className="inputs"
-            value={parking}
-            onChange={handleParkingChange}
-          >
-            <option value="" disabled>Select Parking</option>
-            <option value="1">1 Car Park</option>
-            <option value="2">2 Car Parks</option>
-            <option value="entire">Entire Ground Floor</option>
-          </select>
-        </div>
-        <div className="form-groups">
-          <label className="labels">Package:</label>
-          <select
-            className="inputs"
-            value={selectedPackage}
-            onChange={handlePackageChange}
-          >
-            <option value="" disabled>Select Package</option>
-            {packages.map((pkg) => (
-              <option key={pkg.name} value={pkg.name}>
-                {pkg.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="result">
-          <h4 className="result-title">Estimated Total Cost:</h4>
-          <p className="result-cost">{calculateTotalCost().toLocaleString()} Rs</p>
-        </div>
+    <>
+  <div className='bg-clr'>
+    <div class="text-center">
+      <h2 className="fonts mt-4">Cost Calculator For Building A House</h2>
+      <p  className="pb-4 mt-4">Fill out the form below to get an estimate of
+          construction costs.
+      </p>
       </div>
+    <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md">
+      <label className="block mb-2">
+        Site Length (ft):
+        <input type="text" placeholder='Ex: 30 Area (sq.ft)' value={siteLength} onChange={(e) => setSiteLength(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+      </label>
+      <label className="block mb-2">
+        Site Breadth (ft):
+        <input type="text" placeholder='Ex: 40 Area (sq.ft)' value={siteBreadth} onChange={(e) => setSiteBreadth(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+      </label>
+      <label className="block mb-2">
+        Select Package:
+        <select value={selectedPackage.name} onChange={(e) => setSelectedPackage(packages.find(p => p.name === e.target.value))} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+          {packages.map((pkg, index) => (
+            <option key={index} value={pkg.name}>{pkg.name}</option>
+          ))}
+        </select>
+      </label>
+      <button onClick={calculateTotalCost} className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Calculate Total Cost</button>
+      <p className="mt-4">Total Construction Cost: Rs. {totalCost}</p>
     </div>
+    </div>
+    </>
   );
-};
+}
 
 export default ConstructionCalculator;

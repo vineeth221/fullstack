@@ -34,12 +34,12 @@ const Home = () => {
             <Navbar />
             <SwipeCarousel />
             <CountUpStats />
-            <ShuffleHero />
+            {/* <ShuffleHero /> */}
             <WhatsAppIcon />
             <PackageSelector/>
             {/* <VideoPlayer /> */}
-            {/* <ConstructionCalculator /> */}
             <Testimonials />
+            <ConstructionCalculator />
             <Faqs/>
             <Footer />
           </div>
