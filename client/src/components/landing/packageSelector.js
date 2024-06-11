@@ -267,7 +267,7 @@ const PackageSelector = () => {
         </div>
       </div>
       <div className="container-package bg-custom-gray">
-        <h2 className="title text-custom-blue">Package Selector</h2>
+        {/* <h2 className="title text-custom-blue">Package Selector</h2> */}
         <div className="flexis">
           <div className="flex-columns">
             <select
