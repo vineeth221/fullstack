@@ -94,12 +94,12 @@ export const Interiors = () => {
                             <p className="mb-4 md:text-xl">
                                 Experience the elegance and functionality of modular and Italian home interiors. Our modular solutions are designed to optimize your space, providing you with innovative and efficient layouts that suit modern living. Italian designs bring a touch of sophistication and luxury, known for their craftsmanship, quality materials, and timeless appeal. Whether it’s a sleek, modern kitchen or a cozy, elegant living room, our interiors blend style with practicality.
                             </p>
-                            {/* <Row className="my-8">
+                            <Row className="my-8">
                 <div className="d-flex justify-center">
-                <Col md={6}>
+                <Col md={12}>
                   <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Services</h3>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-1', 'head-1')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Interior Designing</div>
                       <img id="head-1" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-1') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -111,7 +111,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-2', 'head-2')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Modular Kitchens</div>
                       <img id="head-2" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-2') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -123,7 +123,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-3', 'head-3')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Modular Interiors</div>
                       <img id="head-3" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-3') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -135,7 +135,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-4', 'head-4')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Lighting</div>
                       <img id="head-4" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-4') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -147,7 +147,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-5', 'head-5')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Wall Decors</div>
                       <img id="head-5" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-5') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -159,7 +159,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-6', 'head-6')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Customised Home Furniture</div>
                       <img id="head-6" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-6') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -171,7 +171,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-7', 'head-7')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Wardrobes</div>
                       <img id="head-7" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-7') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -183,7 +183,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-8', 'head-8')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Furnishing & Decors</div>
                       <img id="head-8" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-8') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -195,11 +195,13 @@ export const Interiors = () => {
                     )}
                   </div>
                 </Col>
-                
-                <Col md={6}>
+                </div>
+              </Row>
+              <Row>
+                 <Col md={12}>
                   <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Process</h3>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-9', 'head-9')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Initial Consultation</div>
                       <img id="head-9" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-9') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -211,7 +213,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-10', 'head-10')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Design Development</div>
                       <img id="head-10" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-10') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -223,7 +225,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-11', 'head-11')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Execution</div>
                       <img id="head-11" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-11') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -235,7 +237,7 @@ export const Interiors = () => {
                     )}
                   </div>
 
-                  <div className="faq-item mb-6">
+                  <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-12', 'head-12')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Final Touches</div>
                       <img id="head-12" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-12') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -247,8 +249,7 @@ export const Interiors = () => {
                     )}
                   </div>
                 </Col>
-                </div>
-              </Row> */}
+              </Row>
                             <ShuffleHero />
                         </Container>
                     </section>

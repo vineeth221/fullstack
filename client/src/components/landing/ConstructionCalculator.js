@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const packages = [
   {
@@ -45,11 +46,11 @@ const ConstructionCalculator = () => {
         </div>
         <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md">
           <label className="block mb-2">
-            Site Length (ft):
+            Site Length (sq.ft*):
             <input type="text" placeholder='Ex: 30 Area(sq.ft)*' value={siteLength} onChange={(e) => setSiteLength(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
-            Site Breadth (ft):
+            Site Breadth (sq.ft*):
             <input type="text" placeholder='Ex: 40 Area(sq.ft)*' value={siteBreadth} onChange={(e) => setSiteBreadth(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
@@ -65,8 +66,16 @@ const ConstructionCalculator = () => {
             </select>
           </label>
           <button onClick={calculateTotalCost} className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Calculate Total Cost</button>
-          <p className="mt-4">Total Construction Cost: Rs. {totalCost}</p>
+          <div className="mt-4 flex justify-between">
+            <p className="font-bold">Total Construction Cost:</p>
+            <p className="font-bold text-blue-700">Rs. {totalCost.toLocaleString()}/-</p>
+          </div>
         </div>
+        <Row className="my-8 d-flex justify-center text-dark">
+                <Col md={4}>
+      <p className="mt-2 text-center text-sm text-gray-600">*This is just approximate built-up area and approximate cost. The final built-up area and cost can be derived only after architectural plans are finalized.</p>
+     </Col>
+     </Row>
       </div>
     </>
   );

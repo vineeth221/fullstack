@@ -78,8 +78,8 @@ export const Construction = () => {
           </div>
           <section className="px-4 py-12">
             <Container>
-            <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 
-            :</span></h2>
+              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 
+              :</span></h2>
               <p className="mb-4 md:text-xl">
                 17 Columns from the House Of vintage Realty is a tech driven turnkey residential
                 construction service provider who offers complete services with regards to residential
@@ -96,7 +96,38 @@ export const Construction = () => {
                 the same and bring life into it with great quality and on time or simply bring the Architect’s
                 imagination into life with at most quality.
               </p>
-
+              <p className="mb-4 md:text-xl">
+                That’s why we say “17 Columns is the place where design meets and beautiful home need
+                not be really expensive”
+              </p>
+              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> Our <span style={{ color: "#3f97d2" }}> Models
+                :</span>
+                </h2>
+              <p></p>
+              <div>
+                <h3 className="md:text-3xl sm:text-xl text-lg mb-2">Base Package Model:</h3>
+                <p className="mb-4 md:text-xl">
+                  Here, as our beloved client you get to choose the basic package considering your budget
+                  and we design the house within the budget and boundaries and in case of any ala carte
+                  added or upgradation you choose you only pay for it.
+                </p>
+              </div>
+              <div>
+                <h3 className="md:text-3xl sm:text-xl text-lg mb-2">Design First Model:</h3>
+                <p className="mb-4 md:text-xl">
+                  Here, as a client you get to choose to get the designs and plans first and then we derive the
+                  costing where everything is customised and the designs happens openly with full freedom.
+                  And the cost will not vary.
+                </p>
+              </div>
+              <div>
+                <h3 className="md:text-3xl sm:text-xl text-lg mb-2">Project Management Model:</h3>
+                <p className="mb-4 md:text-xl">
+                  Here, our clients can appoint us only to design and manage the project and the complete
+                  procurement and labor pay out is completely in Customers Hand. In simple words you own
+                  we manage and handover the project.
+                </p>
+              </div>
             </Container>
           </section>
           <div className="small-space" />
