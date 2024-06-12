@@ -697,8 +697,6 @@ background-color:#2f73a1;
 .package-title {
   width:47%;
   margin: 0;
-  font-weight: 600;
-  margin-bottom: 8px;
 }
 
 .container-normal {
@@ -812,7 +810,6 @@ background-color:#2f73a1;
 .package-title {
   margin: 0;
   font-size: 12px;
-  color: #fff;
 }
 
 .text-custom-gray {
