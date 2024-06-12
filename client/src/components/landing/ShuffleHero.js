@@ -29,7 +29,7 @@ const ShuffleHero = () => {
   <span className="colour-text">Every Home Tells A Story, We help them build!</span>  
     </p>
   </div>
-    <section className="w-full py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+    <section className="w-full py-6 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
         <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
           At 17 Columns

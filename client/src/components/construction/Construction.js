@@ -76,7 +76,7 @@ export const Construction = () => {
               </div>
             </div>
           </div>
-          <section className="px-4 py-12">
+          <section className="px-4 py-6">
             <Container>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 
               :</span></h2>
@@ -130,7 +130,6 @@ export const Construction = () => {
               </div>
             </Container>
           </section>
-          <div className="small-space" />
           <div className="main-heading text-center">
             <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
               Platform Showcase
