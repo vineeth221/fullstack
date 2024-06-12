@@ -195,7 +195,14 @@ export const Interiors = () => {
                   </div>
                 </Col>
               </Row>
-              <Row>
+             
+                            <ShuffleHero />
+                        </Container>
+                    </section>
+                    <VideoPlayer />
+                    <div className="small-space"/>
+                    <Container>
+                    <Row>
                  <Col md={12}>
                   <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Process</h3>
 
@@ -248,10 +255,8 @@ export const Interiors = () => {
                   </div>
                 </Col>
               </Row>
-                            <ShuffleHero />
-                        </Container>
-                    </section>
-                    <VideoPlayer />
+              </Container>
+              <div className="small-space"/>
                     <Footer />
                 </>
             )}
