@@ -44,7 +44,7 @@ const ConstructionCalculator = () => {
               construction costs.
           </p>
         </div>
-        <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md">
+        <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md wood-img">
           <label className="block mb-2">
             Site Length (sq.ft*):
             <input type="text" placeholder='Ex: 30 Area(sq.ft)*' value={siteLength} onChange={(e) => setSiteLength(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />

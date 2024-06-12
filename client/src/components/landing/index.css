@@ -882,6 +882,9 @@ background-color:#2f73a1;
 .text-responsive {
   font-size: 1rem; /* Default font size for small screens */
 }
+.wood-img{
+  background-image: url("../navbar/icons/woodgrain-light.jpeg");
+}
 
 @media (min-width: 1024px) {
   /* Large screens */
