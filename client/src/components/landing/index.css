@@ -881,6 +881,17 @@ background-color:#2f73a1;
   font-size: 2rem;
   line-height: 50px;
 }
+.text-responsive {
+  font-size: 1rem; /* Default font size for small screens */
+}
+
+@media (min-width: 1024px) {
+  /* Large screens */
+  .text-responsive {
+    font-size: 3rem;
+  }
+}
+
 
  @media (min-width: 300px) {
   .container {
@@ -891,6 +902,9 @@ background-color:#2f73a1;
 @media (min-width: 300px) and (max-width:600px) {
   .flexis{
     display: inline;
+  }
+  .text-responsive {
+    font-size: 2rem;
   }
   .container-package{
     max-width:100%;

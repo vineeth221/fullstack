@@ -5,7 +5,6 @@ import interior from '../../components/navbar/icons/interior.jpg';
 import sofa from '../../components/navbar/icons/sofa.jpg';
 import kitchen from '../../components/navbar/icons/kitchen.jpg';
 
-
 const imgs = [
   // Image1,
   sofa,
@@ -24,9 +23,18 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
- const SwipeCarousel = () => {
-  const [imgIndex, setImgIndex] = useState(0);
+const TEXT_ANIMATION = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
 
+const IMAGE_ANIMATION = {
+  hidden: { scale: 1 },
+  visible: { scale: 1.1, transition: { duration: 10, ease: "linear" } },
+};
+
+const SwipeCarousel = () => {
+  const [imgIndex, setImgIndex] = useState(0);
   const dragX = useMotionValue(0);
 
   useEffect(() => {
@@ -83,7 +91,34 @@ const SPRING_OPTIONS = {
   );
 };
 
-const Images = ({ imgIndex }) => {
+const Images = ({ imgIndex, textPosition = 'center' }) => {
+  const getTextStyles = () => {
+    switch (textPosition) {
+      case 'left':
+        return {
+          top: '0%',
+          left: '20px',
+          transform: 'translateY(-50%)',
+          textAlign: 'left',
+        };
+      case 'right':
+        return {
+          top: '0%',
+          right: '20px',
+          transform: 'translateY(-50%)',
+          textAlign: 'right',
+        };
+      case 'center':
+      default:
+        return {
+          top: '35%',
+          left: '0%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+        };
+    }
+  };
+
   return (
     <>
       {imgs.map((imgSrc, idx) => {
@@ -109,42 +144,31 @@ const Images = ({ imgIndex }) => {
                 zIndex: 2,
               }}
             />
-            <div
+            <motion.div
+              initial="hidden"
+              animate={imgIndex === idx ? "visible" : "hidden"}
+              variants={TEXT_ANIMATION}
               style={{
                 position: "absolute",
-                top: "50%",
-                left: "20px", // Adjust left padding as needed
-                transform: "translateY(-50%)",
                 zIndex: 3, // Ensure text appears above the gradient
                 color: "white",
                 width: "calc(100% - 40px)", // Adjust width to leave space for padding
+                ...getTextStyles(),
               }}
+              className="text-responsive"
             >
-              {/* <h2
+              <h2
                 style={{
-                  fontSize: "2rem",
                   fontWeight: "bold",
-                  marginBottom: "1rem",
                   textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)", // Add text shadow
                   whiteSpace: "pre-wrap", // Allow text to wrap
                 }}
               >
-                Interior design is making the best possible use of the available space.
+                WE BUILD YOUR
+                <br />
+                NEXT WORLD
               </h2>
-              <button
-                style={{
-                  padding: "0.5rem 1rem",
-                  backgroundColor: "rgb(99, 102, 241)", // Button color
-                  color: "white",
-                  borderRadius: "0.5rem",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "background-color 0.3s ease",
-                }}
-              >
-                Explore
-              </button> */}
-            </div>
+            </motion.div>
             <motion.img
               src={imgSrc}
               alt={`Image ${idx}`}
@@ -155,10 +179,9 @@ const Images = ({ imgIndex }) => {
                 position: "relative",
                 zIndex: 1,
               }}
-              animate={{
-                scale: imgIndex === idx ? 0.95 : 0.85,
-              }}
-              transition={SPRING_OPTIONS}
+              initial="hidden"
+              animate="visible"
+              variants={IMAGE_ANIMATION}
             />
           </motion.div>
         );
@@ -166,7 +189,6 @@ const Images = ({ imgIndex }) => {
     </>
   );
 };
-
 
 const Dots = ({ imgIndex, setImgIndex }) => {
   return (
@@ -193,6 +215,6 @@ const GradientEdges = () => {
       <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[5vw] max-w-[50px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" /> {/* Reduced width */}
     </>
   );
-  
 };
+
 export default SwipeCarousel;
