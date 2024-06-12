@@ -695,7 +695,7 @@ background-color:#2f73a1;
 } */
 
 .package-title {
-  width:70%;
+  width:60%;
   margin: 0;
   font-weight: 600;
   margin-bottom: 8px;
@@ -877,6 +877,10 @@ background-color:#2f73a1;
   background-color: #c9d9f3;
   padding:2rem;
 }
+.sample-style{
+  font-size: 2rem;
+  line-height: 50px;
+}
 
  @media (min-width: 300px) {
   .container {
@@ -892,6 +896,10 @@ background-color:#2f73a1;
     max-width:100%;
     border-radius: 0px;
  }
+ .sample-style{
+  font-size: 2rem;
+  line-height: 30px;
+}
 
 }
 @media (max-width: 991px) {

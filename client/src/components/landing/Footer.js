@@ -86,7 +86,7 @@ const Footer = () => {
     };
     return (
         <>
-            <div className="small-space" />
+            <div className="small-sub-space" />
             <div className="small-space" />
             <footer className="bg-gray-900 text-white">
             {screenSize > 900  &&  (
@@ -178,8 +178,8 @@ const Footer = () => {
                  </>
                  )}
                 <div
-                    className="grid gap-10 text-center text-gray-400 text-sm"
-                    style={{ fontSize: "1.2rem", fontWeight: 600, borderTop: "1px solid rgb(55 65 81)", padding: "1.5rem" }}
+                  className="grid gap-10 text-center text-gray-400 text-sm"
+                  style={{ fontSize: "1.2rem", fontWeight: 600, borderTop: "1px solid rgb(55 65 81)", padding: "1.5rem" }}
                 >
                     <p>Follow us : <div style={{ padding: '1rem' }} ><SocialIcons Icons={Icons} /></div></p>
                 </div>
