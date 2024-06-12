@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import Image1 from '../../components/navbar/icons/building.jpg';
+// import Image1 from '../../components/navbar/icons/building.jpg';
 import interior from '../../components/navbar/icons/interior.jpg';
 import sofa from '../../components/navbar/icons/sofa.jpg';
 import kitchen from '../../components/navbar/icons/kitchen.jpg';
@@ -152,7 +152,7 @@ const Images = ({ imgIndex, textPosition = 'center' }) => {
                 position: "absolute",
                 zIndex: 3, // Ensure text appears above the gradient
                 color: "white",
-                width: "calc(100% - 40px)", // Adjust width to leave space for padding
+                width: "calc(100% - 0px)", // Adjust width to leave space for padding
                 ...getTextStyles(),
               }}
               className="text-responsive"
