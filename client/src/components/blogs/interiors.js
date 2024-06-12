@@ -95,7 +95,6 @@ export const Interiors = () => {
                                 Experience the elegance and functionality of modular and Italian home interiors. Our modular solutions are designed to optimize your space, providing you with innovative and efficient layouts that suit modern living. Italian designs bring a touch of sophistication and luxury, known for their craftsmanship, quality materials, and timeless appeal. Whether it’s a sleek, modern kitchen or a cozy, elegant living room, our interiors blend style with practicality.
                             </p>
                             <Row >
-                <div className="d-flex justify-center">
                 <Col md={12}>
                   <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Services</h3>
 
@@ -195,7 +194,6 @@ export const Interiors = () => {
                     )}
                   </div>
                 </Col>
-                </div>
               </Row>
               <Row>
                  <Col md={12}>
