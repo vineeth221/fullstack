@@ -822,8 +822,9 @@ background-color:#2f73a1;
 }
 .display-flex{
   background: #3f97d2;
-    padding: 1rem;
-    display: flex;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
 }
 .accordion-panel {
   display: none;
