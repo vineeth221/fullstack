@@ -94,7 +94,7 @@ export const AboutUS = () => {
             </div>
           </motion.section>
 
-          <section className="px-4 py-12">
+          <section className="px-4 py-6">
             <div className="container mx-auto">
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{color:"#3f97d2"}}>About Us ?</span></h2>
               <p className="mb-4 md:text-xl">
