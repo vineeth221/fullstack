@@ -289,17 +289,32 @@ background-color:#2f73a1;
   background: #f2f4f8;
   position: relative;
 }
-.blog-posts .entry-header .entry-title {
-  font-size: 18px;
-  height: 90px;
+.blog-posts .entry-content-wraps {
+  padding: 25px 30px 25px 30px;
+  background: #f8f9fa !important;
+  position: relative;
 }
 .blog-posts .entry-header .entry-title {
-  font-size: 20px;
+  font-size: 18px;
+  height: 70px;
+}
+.blog-posts .entry-header .entry-title {
   margin: 0;
   line-height: 1.3;
   font-weight: 700;
   text-transform: uppercase;
-  min-height: 78px;
+  min-height: 48px;
+}
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.cardshadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.card-footer {
+  color: #15416e;
+  font-size: 13px;
+  padding: .8rem 1rem;
 }
 .blog-posts .entry-footer {
   margin-top: 15px;
