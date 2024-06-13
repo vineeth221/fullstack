@@ -271,9 +271,9 @@ background-color:#2f73a1;
   transition: width 0.3s ease; 
   border-radius: 50px;
 }
-.entry-wrapper {
+/* .entry-wrapper {
   width: 340px;
-}
+} */
 .blog-posts .entry-cover {
   position: relative;
   overflow: hidden;
