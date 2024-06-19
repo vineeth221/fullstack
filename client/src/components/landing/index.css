@@ -900,7 +900,12 @@ background-color:#2f73a1;
 .wood-img{
   background-image: url("../navbar/icons/woodgrain-light.jpeg");
 }
-
+.font-name{
+  font-size: 40px; 
+  font-weight: 400; 
+  margin: 0rem 2rem;
+  max-width: 700px;
+}
 @media (min-width: 1024px) {
   /* Large screens */
   .text-responsive {
@@ -929,6 +934,9 @@ background-color:#2f73a1;
  .sample-style{
   font-size: 2rem;
   line-height: 30px;
+}
+.font-name{
+  font-size: 22px; 
 }
 
 }
