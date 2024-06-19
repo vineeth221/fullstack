@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Link } from 'react-router-dom';
 import build1 from '../../components/navbar/icons/build1.jpeg';
 import build2 from '../../components/navbar/icons/build2.jpeg';
 import build3 from '../../components/navbar/icons/build3.jpeg';
@@ -40,9 +41,11 @@ const ShuffleHero = () => {
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
         We offer complete turnkey house construction services right from the architectural designing to constructing the home to interiors till handover.
         </p>
+        <Link to="/contact">
         <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
         Get your free consultation
         </button>
+        </Link>
       </div>
       <ShuffleGrid />
     </section>
