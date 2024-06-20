@@ -67,7 +67,7 @@ export const AboutUS = () => {
                 17 Columns is where Designs meet Quality for you
               </h1>
               <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-                17 Columns is a premium crafted house construction and home interiors brand from the House of Vintage Realty
+                17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Realty
               </p>
               <motion.button
                 style={{
@@ -82,7 +82,7 @@ export const AboutUS = () => {
                 }}
                 className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
               >
-                Know about Vintage Reality
+                Know about Wintage Reality
                 <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
               </motion.button>
             </div>
@@ -98,7 +98,7 @@ export const AboutUS = () => {
             <div className="container mx-auto">
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{color:"#3f97d2"}}>About Us ?</span></h2>
               <p className="mb-4 md:text-xl">
-                17 Columns is a premium crafted house construction and home interiors brand from the House of vintage Realty. Driven by three simple principles—Great Design, Right Costing, and Uncompromised Quality—17 Columns ensures that great architectural design and superior quality are delivered at the right cost. As a home aspirant, everyone desires and deserves a home that embodies these qualities, and at 17 Columns, this is precisely what we provide. As we always say, “Happiness Under Construction.”
+                17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Realty. Driven by three simple principles—Great Design, Right Costing, and Uncompromised Quality—17 Columns ensures that great architectural design and superior quality are delivered at the right cost. As a home aspirant, everyone desires and deserves a home that embodies these qualities, and at 17 Columns, this is precisely what we provide. As we always say, “Happiness Under Construction.”
               </p>
               <p className="mb-4 md:text-xl">
                 17 Columns offers more than just house construction. We provide comprehensive home interior solutions tailored to your specific needs and preferences. Our commitment to using the best materials, innovative design techniques, and skilled craftsmanship ensures that every project we undertake meets the highest standards of excellence. We also offer post-construction support and maintenance services to ensure your home remains in perfect condition for years to come.

@@ -87,7 +87,7 @@ export const Interiors = () => {
             <Container>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Home <span style={{ color: "#3f97d2" }}>Interiors:</span></h2>
               <p className="mb-4 md:text-xl">
-                17 Columns from House Of Vintage Realty offers premium Home Interiors in both design and quality front and help you personalise your dream home just the way it defines you. We do completely modular and Italian Home Interiors best suited to you and make your house feel like home.
+                17 Columns from House Of Wintage Realty offers premium Home Interiors in both design and quality front and help you personalise your dream home just the way it defines you. We do completely modular and Italian Home Interiors best suited to you and make your house feel like home.
               </p>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> Modular and<span style={{ color: "#3f97d2" }}> Italian Home Interiors
                 :</span></h2>
