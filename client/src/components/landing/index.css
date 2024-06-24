@@ -158,9 +158,12 @@ a.text-gray-400.hover\:text-teal-400.duration-300.text-sm.cursor-pointer.leading
   border-radius: 0px 0px 20px 20px;
   height: 64px;
   top: -41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #3d7193;
-  right: 30%; /* Center the title horizontally */
-  transform: translateX(50%); /* Center the title horizontally */
+  right: 30%;
+  transform: translateX(50%);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
 }
 .coming-soon .sample {
