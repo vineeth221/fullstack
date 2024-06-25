@@ -19,6 +19,7 @@ import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import NewBlog from '../../components/blogs/newBlog';
 import '../landing/index.css'
+import Choose from "../landing/choose";
 
 const COLORS_TOP = ["#3f97d2"];
 
@@ -82,6 +83,9 @@ export const Construction = () => {
               </div>
             </div>
           </div>
+          <Container>
+        <Choose/>
+        </Container>
           <section className="px-4 py-6">
             <Container>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 

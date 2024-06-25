@@ -12,12 +12,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/landing/Footer';
-import build6 from '../../components/navbar/icons/build6.jpeg';
-import build5 from '../../components/navbar/icons/build11.jpeg';
-import build4 from '../../components/navbar/icons/build12.jpeg';
-import build3 from '../../components/navbar/icons/build7.jpeg';
-import build2 from '../../components/navbar/icons/build2.jpeg';
-import build1 from '../../components/navbar/icons/build1.jpeg';
+import build6 from '../../components/navbar/icons/building.jpeg';
+import build5 from '../../components/navbar/icons/building5.jpeg';
+import build4 from '../../components/navbar/icons/building4.jpeg';
+import build3 from '../../components/navbar/icons/building3.jpeg';
+import build2 from '../../components/navbar/icons/building2.jpeg';
+import build1 from '../../components/navbar/icons/building1.jpeg';
 
 // import NewBlog from '../../components/blogs/newBlog';
 

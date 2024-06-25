@@ -15,6 +15,7 @@ import Footer from '../../components/landing/Footer';
 import Down from '../../components/navbar/icons/chevron-down.svg';
 import VideoPlayer from '../landing/VideoPlayer';
 import ShuffleHero from "../landing/ShuffleHero";
+import ChooseUs from "../landing/chooseus";
 
 const COLORS_TOP = ["#3f97d2"];
 
@@ -82,7 +83,9 @@ export const Interiors = () => {
               </Canvas>
             </div>
           </motion.section>
-
+          <Container>
+        <ChooseUs/>
+        </Container>
           <section className="px-4 py-12">
             <Container>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Home <span style={{ color: "#3f97d2" }}>Interiors:</span></h2>
