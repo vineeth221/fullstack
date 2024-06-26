@@ -105,24 +105,24 @@ const OverlayCopy = ({ subheading, heading }) => {
 };
 
 const ExampleContent = () => (
-  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-12 sm:grid-cols-12">
+  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 pb-12 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
     Cast In Situ / Conventional
     </h2>
     <div className="col-span-1 sm:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 sm:text-2xl">
+      <p className="mb-4  text-neutral-600 md:text-xl">
       This is the very simple age old technology which even a layman can understand and work on where we bring all the raw materials to the construction site and deploy manpower / labourers and build everything at the site. This does take a lot of time and standard quality  is achieved.
       </p>
     </div>
   </div>
 );
 const ExampleContent1 = () => (
-  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-12 sm:grid-cols-12">
+  <div className="mx-auto grid max-w-full sm:max-w-5xl grid-cols-1 gap-8 pb-12 pt-12 sm:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold sm:col-span-4">
     Pre Fabricated / Metal Frame Hybrid Method
     </h2>
     <div className="col-span-1 sm:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 sm:text-2xl">
+      <p className="mb-4 md:text-xl text-neutral-600 ">
       This is a technology where metal frame is constructed or deployed once the foundation is done and then the concrete is casted for the roofs and walls are build around the structure. In this method 50% of the construction time can be saved and at almost the same cost or at lesser cost with far better quality than the traditional method and the biggest advantage is the ease of renovation in the future.
       </p>
     </div>
