@@ -7,6 +7,7 @@ import {
   motion,
   animate,
 } from "framer-motion";
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../../components/landing/Footer';
 import build6 from '../../components/navbar/icons/archi6.jpeg';
@@ -63,33 +64,14 @@ export const Construction = () => {
                   <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
                     800+ families trusted us with building their homes
                   </p>
-                  <motion.button
-                    style={{
-                      border,
-                      boxShadow,
-                    }}
-                    whileHover={{
-                      scale: 1.015,
-                    }}
-                    whileTap={{
-                      scale: 0.985,
-                    }}
-                    className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-                  >
-                    Learn More
-                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-                  </motion.button>
                 </div>
               </div>
             </div>
           </div>
-          <Container>
-        <Choose/>
-        </Container>
           <section className="px-4 py-6">
             <Container>
-              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction 
-              :</span></h2>
+              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction
+                :</span></h2>
               <p className="mb-4 md:text-xl">
                 17 Columns from the House Of Wintage Realty is a tech driven turnkey residential
                 construction service provider who offers complete services with regards to residential
@@ -108,9 +90,17 @@ export const Construction = () => {
                 That’s why we say “17 Columns is the place where design meets and beautiful home need
                 not be really expensive”
               </p>
+              <div className="main-heading text-center">
+                <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
+                  Our Technologies
+                </p>
+                <div className="underline" />
+              </div>
+              <div className="small-space" />
+              <NewBlog />
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> Our <span style={{ color: "#3f97d2" }}> Models
                 :</span>
-                </h2>
+              </h2>
               <p></p>
               <div>
                 <h3 className="md:text-3xl sm:text-xl text-lg mb-2">Base Package Model:</h3>
@@ -135,151 +125,184 @@ export const Construction = () => {
                   procurement and labor pay out is completely in Customers Hand. In simple words you own
                   we manage and handover the project.
                 </p>
+                <Link to="/home">
+                  <motion.button
+                    style={{
+                      border,
+                      boxShadow,
+                    }}
+                    whileHover={{
+                      scale: 1.015,
+                    }}
+                    whileTap={{
+                      scale: 0.985,
+                    }}
+                    className="group relative flex w-fit items-center gap-1.5 rounded-full bg-[#3f97d2] px-4 py-2 text-white transition-colors hover:bg-[#3f97d2]/90"
+                  >
+                    Explore Packages
+                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                  </motion.button>
+                </Link>
               </div>
             </Container>
             <Container className="d-flex justify-content-center">
-            <Row>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                      
-                      <a href="#"><img src={build1} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h2 className="entry-title">
-                          <a href="#">Modern Contemporary Architecture</a>
-                        </h2>
+              <Row>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+
+                        <a href="#"><img src={build1} alt="Midwifery 2024" /></a>
+                      </div>
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h2 className="entry-title">
+                            <a href="#">Modern Contemporary Architecture</a>
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
                       </div>
                     </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
+                  </article>
+                </Col>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+
+                        <a href="#"><img src={build2} alt="Midwifery 2024" /></a>
+                      </div>
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h2 className="entry-title">
+                            <a href="#">Traditional / Vernacular / Kerala Architecture</a>
+                          </h2>
                         </div>
-                  </div>
-                </article>
-              </Col>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                      
-                      <a href="#"><img src={build2} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h2 className="entry-title">
-                          <a href="#">Traditional / Vernacular / Kerala Architecture</a>
-                        </h2>
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
                       </div>
                     </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
+                  </article>
+                </Col>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+
+                        <a href="#"><img src={build3} alt="Midwifery 2024" /></a>
+                      </div>
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h2 className="entry-title">
+                            <a href="#">European Architecture</a>
+                          </h2>
                         </div>
-                  </div>
-                </article>
-              </Col>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                     
-                      <a href="#"><img src={build3} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h2 className="entry-title">
-                          <a href="#">European Architecture</a>
-                        </h2>
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
                       </div>
                     </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
+                  </article>
+                </Col>
+              </Row>
+            </Container>
+            <Container className="d-flex justify-content-center">
+              <Row>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+
+                        <a href="#"><img src={build4} alt="Midwifery 2024" /></a>
+                      </div>
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h2 className="entry-title">
+                            <a href="#">Sustainable Architecture</a>
+                          </h2>
                         </div>
-                  </div>
-                </article>
-              </Col>
-            </Row>
-          </Container>
-          <Container className="d-flex justify-content-center">
-          <Row>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                     
-                      <a href="#"><img src={build4} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h2 className="entry-title">
-                          <a href="#">Sustainable Architecture</a>
-                        </h2>
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
                       </div>
                     </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
+                  </article>
+                </Col>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+
+                        <a href="#"><img src={build5} alt="Midwifery 2024" /></a>
+                      </div>
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h2 className="entry-title">
+                            <a href="#">Eco Friendly Architecture</a>
+                          </h2>
                         </div>
-                  </div>
-                </article>
-              </Col>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                      
-                      <a href="#"><img src={build5} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h2 className="entry-title">
-                          <a href="#">Eco Friendly Architecture</a>
-                        </h2>
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
                       </div>
                     </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
-                        </div>
-                  </div>
-                </article>
-              </Col>
-              <Col md={4}>
-                <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
-                  <div className="entry-wrapper">
-                    <div className="entry-cover">
-                      <a href="#"><img src={build6} alt="Midwifery 2024" /></a>
-                    </div>
-                    <div className="entry-content-wraps">
-                      <div className="entry-header">
-                        <h5 className="entry-title">
-                        Minimalistic Architecture
-                        </h5>
+                  </article>
+                </Col>
+                <Col md={4}>
+                  <article className="blog-posts cardshadow d-flex justify-content-center mt-4">
+                    <div className="entry-wrapper">
+                      <div className="entry-cover">
+                        <a href="#"><img src={build6} alt="Midwifery 2024" /></a>
                       </div>
-                     
-                    </div>
-                    <div class="card-footer border-0 bg-white cardhov">
-                            <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024  
-                           <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a> 
+                      <div className="entry-content-wraps">
+                        <div className="entry-header">
+                          <h5 className="entry-title">
+                            Minimalistic Architecture
+                          </h5>
                         </div>
-                  </div>
-                </article>
-              </Col>
-            </Row>
-          </Container>
+
+                      </div>
+                      <div class="card-footer border-0 bg-white cardhov">
+                        <a target="_blank" href="https://www.neuroscience.scientexconference.com/webinar"><i class="fa fa-calendar-check-o px-2 " aria-hidden="true"></i>November 21-22, 2024
+                          <i class="fa fa-clock-o py-2" aria-hidden="true"></i> GMT+7 </a>
+                      </div>
+                    </div>
+                  </article>
+                </Col>
+              </Row>
+            </Container>
           </section>
-          <div className="main-heading text-center">
-            <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
-              Platform Showcase
-            </p>
-            <div className="underline" />
-          </div>
-          <div className="small-space" />
-          <NewBlog />
+          <Container>
+            <Choose />
+            <Link to="/home">
+              <div className="p-4">
+                <motion.button
+                  style={{
+                    border,
+                    boxShadow,
+                  }}
+                  whileHover={{
+                    scale: 1.015,
+                  }}
+                  whileTap={{
+                    scale: 0.985,
+                  }}
+                  className="group relative flex w-fit items-center gap-1.5 rounded-full bg-[#3f97d2] px-4 py-2 text-white transition-colors hover:bg-[#3f97d2]/90"
+                >
+                  Calculate your construction Cost
+                  <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                </motion.button>
+              </div>
+            </Link>
+          </Container>
           <Footer />
         </>
       )}

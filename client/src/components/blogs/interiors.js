@@ -83,25 +83,19 @@ export const Interiors = () => {
               </Canvas>
             </div>
           </motion.section>
-          <Container>
-        <ChooseUs/>
-        </Container>
           <section className="px-4 py-12">
             <Container>
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Home <span style={{ color: "#3f97d2" }}>Interiors:</span></h2>
               <p className="mb-4 md:text-xl">
                 17 Columns from House Of Wintage Realty offers premium Home Interiors in both design and quality front and help you personalise your dream home just the way it defines you. We do completely modular and Italian Home Interiors best suited to you and make your house feel like home.
               </p>
-              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> Modular and<span style={{ color: "#3f97d2" }}> Italian Home Interiors
-                :</span></h2>
-              <p className="mb-4 md:text-xl">
-                Experience the elegance and functionality of modular and Italian home interiors. Our modular solutions are designed to optimize your space, providing you with innovative and efficient layouts that suit modern living. Italian designs bring a touch of sophistication and luxury, known for their craftsmanship, quality materials, and timeless appeal. Whether it’s a sleek, modern kitchen or a cozy, elegant living room, our interiors blend style with practicality.
-              </p>
+             
               <Row >
                 <Col md={12}>
-                  <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Services</h3>
-
-                  <div className="faq-item-1 mb-6">
+                <p className="mb-4 md:text-xl">
+                17 Columns offers complete home interior services namely,
+              </p>
+                  {/* <div className="faq-item-1 mb-6">
                     <h5 onClick={() => showAnswer('ans-1', 'head-1')} className="faq-item-heading-1">
                       <div style={{ maxWidth: '90%' }}>Interior Designing</div>
                       <img id="head-1" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-1') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -206,7 +200,41 @@ export const Interiors = () => {
                         Complete furnishing and decor solutions for a cohesive look.
                       </p>
                     )}
-                  </div>
+                  </div> */}
+                   <div className="flex flex-col items-start gap-4 mt-4 mb-4">
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Interior Designing</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Modular Kitchens</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Modular Interiors</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Lighting</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Wall Decors</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Customised Home Furniture</p>
+              </div>
+              <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Home Automation</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">And anything you want.</p>
+              </div>
+              </div>
                 </Col>
               </Row>
 
@@ -216,61 +244,9 @@ export const Interiors = () => {
           <VideoPlayer />
           <div className="small-space" />
           <Container>
-            <Row>
-              <Col md={12}>
-                <h3 className="md:text-5xl sm:text-3xl text-2xl mb-4">Our Process</h3>
-
-                <div className="faq-item-1 mb-6">
-                  <h5 onClick={() => showAnswer('ans-9', 'head-9')} className="faq-item-heading-1">
-                    <div style={{ maxWidth: '90%' }}>Home Automation</div>
-                    <img id="head-9" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-9') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-                  </h5>
-                  {isAnswerVisible('ans-9') && (
-                    <p id="ans-9" className="faq-item-ans">
-                      We help our customers with home automation as well depending on the requirement.
-                    </p>
-                  )}
-                </div>
-
-                <div className="faq-item-1 mb-6">
-                  <h5 onClick={() => showAnswer('ans-10', 'head-10')} className="faq-item-heading-1">
-                    <div style={{ maxWidth: '90%' }}>Themes</div>
-                    <img id="head-10" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-10') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-                  </h5>
-                  {isAnswerVisible('ans-10') && (
-                    <p id="ans-10" className="faq-item-ans">
-                      Themes are the heart of any design and define the mood and personality of the home which
-                      can be sophisticated luxury or natural or exposed or contemporary or even fusion. We are
-                      pioneers in defining and designing and delivering themed homes.
-                    </p>
-                  )}
-                </div>
-
-                <div className="faq-item-1 mb-6">
-                  <h5 onClick={() => showAnswer('ans-11', 'head-11')} className="faq-item-heading-1">
-                    <div style={{ maxWidth: '90%' }}>Execution</div>
-                    <img id="head-11" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-11') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-                  </h5>
-                  {isAnswerVisible('ans-11') && (
-                    <p id="ans-11" className="faq-item-ans">
-                      Our team will bring the designs to life with precision and care.
-                    </p>
-                  )}
-                </div>
-
-                <div className="faq-item-1 mb-6">
-                  <h5 onClick={() => showAnswer('ans-12', 'head-12')} className="faq-item-heading-1">
-                    <div style={{ maxWidth: '90%' }}>Final Touches</div>
-                    <img id="head-12" src={Down} alt='img' loading="lazy" style={{ transform: isAnswerVisible('ans-12') ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-                  </h5>
-                  {isAnswerVisible('ans-12') && (
-                    <p id="ans-12" className="faq-item-ans">
-                      Adding the finishing touches to ensure everything is perfect.
-                    </p>
-                  )}
-                </div>
-              </Col>
-            </Row>
+           </Container>
+          <Container>
+            <ChooseUs />
           </Container>
           <div className="small-space" />
           <Footer />

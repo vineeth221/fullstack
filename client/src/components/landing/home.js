@@ -8,6 +8,7 @@ import PackageSelector from './packageSelector';
 import Faqs from './faqs';
 import ConstructionCalculator from './ConstructionCalculator';
 // import VideoPlayer from '../../components/landing/VideoPlayer';
+import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import Loader from '../loader/Loader';
 import WhatsAppIcon from './WhatsAppIcon';
@@ -15,6 +16,17 @@ import './index.css';
 
 const Home = () => {
   const [isLoadingContent, setIsLoadingContent] = useState(true);
+  const location = useLocation();
+  const [showPackages, setShowPackages] = useState(true);
+  
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('showPackages') === 'true') {
+      setShowPackages(true);
+      scrollToPackages();
+    }
+    setIsLoadingContent(false);
+  }, [location.search]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,6 +36,12 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const scrollToPackages = () => {
+    const packagesSection = document.getElementById('package-details');
+    if (packagesSection) {
+      packagesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div>
       {isLoadingContent ? (
@@ -36,7 +54,7 @@ const Home = () => {
             <CountUpStats />
             {/* <ShuffleHero /> */}
             <WhatsAppIcon />
-            <PackageSelector/>
+            {showPackages && <PackageSelector />}
             {/* <VideoPlayer /> */}
             <Testimonials />
             <ConstructionCalculator />

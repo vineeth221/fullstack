@@ -96,26 +96,44 @@ export const AboutUS = () => {
 
           <section className="px-4 py-6">
             <div className="container mx-auto">
-              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{color:"#3f97d2"}}>About Us ?</span></h2>
+              <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{ color: "#3f97d2" }}>About Us ?</span></h2>
               <p className="mb-4 md:text-xl">
-                17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Realty. Driven by three simple principles—Great Design, Right Costing, and Uncompromised Quality—17 Columns ensures that great architectural design and superior quality are delivered at the right cost. As a home aspirant, everyone desires and deserves a home that embodies these qualities, and at 17 Columns, this is precisely what we provide. As we always say, “Happiness Under Construction.”
+                17 Columns is a premium crafted house construction and home interiors brand from the
+                House Of Wintage Realty. 17 Columns is driven by 3 simple principles which are
               </p>
+              <div className="flex flex-col items-start gap-4 mt-4 mb-4">
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Great Design</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Right Costing</p>
+                </div>
+                <div className="flex items-center">
+                  <FiArrowRight className="mr-2 text-blue-500" />
+                  <p className="text-xl font-bold">Uncompromised Quality</p>
+                </div>
+              </div>
               <p className="mb-4 md:text-xl">
-                17 Columns offers more than just house construction. We provide comprehensive home interior solutions tailored to your specific needs and preferences. Our commitment to using the best materials, innovative design techniques, and skilled craftsmanship ensures that every project we undertake meets the highest standards of excellence. We also offer post-construction support and maintenance services to ensure your home remains in perfect condition for years to come.
+                We believe that at the right costing great architectural design and uncompromised quality
+                should be delivered without an excuse and as a home aspirant that’s what everybody
+                desires and deserves to get and at 17 Columns we are delivering just that like we always say <span className="font-bold">“ Happiness Under Construction”</span>
               </p>
-              <p className="mb-4 md:text-xl">
-                At 17 Columns, we believe that a beautiful home need not be expensive. Our focus on delivering high-quality designs at the right cost without compromising quality sets us apart in the industry. We are dedicated to making your dream home a reality, one that reflects your personality and style, ensuring lasting happiness and satisfaction.
-              </p>
+
               <div className="custom-bg-abt">
-                <h3 className="md:text-6xl sm:text-4xl text-3xl mb-6" style={{marginTop:"3rem"}}>Mission & Vision</h3>
-                <h3 className="md:text-4xl sm:text-3xl text-2xl mb-4"><span style={{color:"#3f97d2"}}>Vision</span></h3>
+                <h3 className="md:text-6xl sm:text-4xl text-3xl mb-6" style={{ marginTop: "3rem" }}>Mission & Vision</h3>
+                <h3 className="md:text-4xl sm:text-3xl text-2xl mb-4"><span style={{ color: "#3f97d2" }}>Vision</span></h3>
                 <p className="mb-4 md:text-xl">
-                  Our vision is to become the go-to house construction and home interiors brand that helps every Indian gift their dream home to their families with great aesthetics and quality. We aspire to set new benchmarks in the residential construction industry by seamlessly blending innovative design, cutting-edge technology, and top-notch craftsmanship. By doing so, we aim to transform the way people perceive home building, making it an enjoyable and stress-free experience.
+                  To be the go to House Construction and Home Interiors brand which helps every Indian in
+                  gifting their dream home to their families with great aesthetics and quality.
                 </p>
-                <h3 className="md:text-4xl sm:text-3xl text-2xl mb-4"><span style={{color:"#3f97d2"}}>Mission</span></h3>
+                <h3 className="md:text-4xl sm:text-3xl text-2xl mb-4"><span style={{ color: "#3f97d2" }}>Mission</span></h3>
                 <p className="mb-4 mb-4 md:text-xl">
-                  We aim to ensure that home aspirants no longer fall victim to market traps and that every home is built with exceptional design and the best industry quality. Our mission is to provide a transparent and trustworthy construction process, where clients are fully informed and involved at every stage. By prioritizing customer satisfaction and maintaining open communication, we strive to eliminate the uncertainties and frustrations commonly associated with home construction.
+                  To ensure home aspirants no longer becomes the victims of the trap market and to build
+                  every home with great design and best in industry quality.
                 </p>
+                <span className="font-bold">“17 Columns is where Designs meet Quality for you”</span>
               </div>
             </div>
           </section>
@@ -184,7 +202,7 @@ export const AboutUS = () => {
             </Row>
           </Container>
           <Container className="d-flex justify-content-center">
-          <Row>
+            <Row>
               <Col md={4}>
                 <article className="blog-posts d-flex justify-content-center mt-4">
                   <div className="entry-wrapper">
