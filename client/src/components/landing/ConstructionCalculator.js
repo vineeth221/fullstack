@@ -20,25 +20,27 @@ const ConstructionCalculator = () => {
   const [siteLength, setSiteLength] = useState('');
   const [siteBreadth, setSiteBreadth] = useState('');
   const [numberOfFloors, setNumberOfFloors] = useState('');
-  const [builtUpArea, setBuiltUpArea] = useState('');
   const [selectedPackage, setSelectedPackage] = useState(packages[0]);
+  const [builtUpArea, setBuiltUpArea] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
 
   const calculateTotalCost = () => {
     const length = parseFloat(siteLength);
     const breadth = parseFloat(siteBreadth);
     const floors = parseFloat(numberOfFloors);
-    const manualBuiltUpArea = parseFloat(builtUpArea);
 
-    let builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
-    if (!isNaN(manualBuiltUpArea) && manualBuiltUpArea > 0) {
-      builtUpAreaPerFloor = manualBuiltUpArea;
+    if (!isNaN(length) && !isNaN(breadth) && !isNaN(floors) && length > 0 && breadth > 0 && floors > 0) {
+      const builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
+      const totalBuiltUpArea = (builtUpAreaPerFloor * floors) + 200;
+      setBuiltUpArea(totalBuiltUpArea);
+
+      const cost = selectedPackage.price * totalBuiltUpArea;
+      setTotalCost(cost);
+    } else {
+      setBuiltUpArea(0);
+      setTotalCost(0);
     }
-    const totalBuiltUpArea = (builtUpAreaPerFloor * floors) + 200;
-
-    const cost = selectedPackage.price * totalBuiltUpArea;
-    setTotalCost(cost);
-  }
+  };
 
   return (
     <>
@@ -61,10 +63,6 @@ const ConstructionCalculator = () => {
             <input type="number" placeholder='Ex: 4' value={numberOfFloors} onChange={(e) => setNumberOfFloors(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
-            Built-Up Area Per Floor (sq.ft)*:
-            <input type="text" placeholder='Ex: 1031' value={builtUpArea} onChange={(e) => setBuiltUpArea(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
-          </label>
-          <label className="block mb-2">
             Select Package:
             <select value={selectedPackage.name} onChange={(e) => setSelectedPackage(packages.find(p => p.name === e.target.value))} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
               {packages.map((pkg, index) => (
@@ -74,8 +72,12 @@ const ConstructionCalculator = () => {
           </label>
           <button onClick={calculateTotalCost} className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Calculate Total Cost</button>
           <div className="mt-4 flex justify-between">
-            <p className="font-bold">Total Construction Cost:</p>
-            <p className="font-bold text-blue-700">Rs. {totalCost.toLocaleString()}/-</p>
+            <p className="font-bold"  style={{fontSize:"14px"}}>Built-Up Area:</p>
+            <p className="font-bold text-blue-700"  style={{fontSize:"14px"}}>{builtUpArea.toLocaleString()} sq.ft</p>
+          </div>
+          <div className="mt-4 flex justify-between">
+            <p className="font-bold"  style={{fontSize:"14px"}}>Total Construction Cost:</p>
+            <p className="font-bold text-blue-700" style={{fontSize:"14px"}}>Rs. {totalCost.toLocaleString()}/-</p>
           </div>
         </div>
         <Row className="my-8 d-flex justify-center text-dark">
