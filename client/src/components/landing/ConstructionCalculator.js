@@ -20,6 +20,7 @@ const ConstructionCalculator = () => {
   const [siteLength, setSiteLength] = useState('');
   const [siteBreadth, setSiteBreadth] = useState('');
   const [numberOfFloors, setNumberOfFloors] = useState('');
+  const [builtUpArea, setBuiltUpArea] = useState('');
   const [selectedPackage, setSelectedPackage] = useState(packages[0]);
   const [totalCost, setTotalCost] = useState(0);
 
@@ -27,8 +28,12 @@ const ConstructionCalculator = () => {
     const length = parseFloat(siteLength);
     const breadth = parseFloat(siteBreadth);
     const floors = parseFloat(numberOfFloors);
-    
-    const builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
+    const manualBuiltUpArea = parseFloat(builtUpArea);
+
+    let builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
+    if (!isNaN(manualBuiltUpArea) && manualBuiltUpArea > 0) {
+      builtUpAreaPerFloor = manualBuiltUpArea;
+    }
     const totalBuiltUpArea = (builtUpAreaPerFloor * floors) + 200;
 
     const cost = selectedPackage.price * totalBuiltUpArea;
@@ -38,11 +43,9 @@ const ConstructionCalculator = () => {
   return (
     <>
       <div className='bg-clr'>
-        <div class="text-center">
+        <div className="text-center">
           <h2 className="fonts mt-4">Cost Calculator For Building A House</h2>
-          <p  className="pb-4 mt-4">Fill out the form below to get an estimate of
-              construction costs.
-          </p>
+          <p className="pb-4 mt-4">Fill out the form below to get an estimate of construction costs.</p>
         </div>
         <div className="max-w-md mx-auto p-4 bg-gray-100 rounded-lg shadow-md wood-img">
           <label className="block mb-2">
@@ -56,6 +59,10 @@ const ConstructionCalculator = () => {
           <label className="block mb-2">
             Number of Floors:
             <input type="number" placeholder='Ex: 4' value={numberOfFloors} onChange={(e) => setNumberOfFloors(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+          </label>
+          <label className="block mb-2">
+            Built-Up Area Per Floor (sq.ft)*:
+            <input type="text" placeholder='Ex: 1031' value={builtUpArea} onChange={(e) => setBuiltUpArea(e.target.value)} className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
           </label>
           <label className="block mb-2">
             Select Package:
@@ -72,10 +79,10 @@ const ConstructionCalculator = () => {
           </div>
         </div>
         <Row className="my-8 d-flex justify-center text-dark">
-                <Col md={4}>
-      <p className="mt-2 text-center text-sm text-gray-600">*This is just approximate built-up area and approximate cost. The final built-up area and cost can be derived only after architectural plans are finalized.</p>
-     </Col>
-     </Row>
+          <Col md={4}>
+            <p className="mt-2 text-center text-sm text-gray-600">*This is just approximate built-up area and approximate cost. The final built-up area and cost can be derived only after architectural plans are finalized.</p>
+          </Col>
+        </Row>
       </div>
     </>
   );
