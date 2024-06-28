@@ -73,7 +73,7 @@ export const Construction = () => {
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4"> House<span style={{ color: "#3f97d2" }}> Construction
                 :</span></h2>
               <p className="mb-4 md:text-xl">
-                17 Columns from the House Of Wintage Realty is a tech driven turnkey residential
+                17 Columns from the House Of Wintage Reality is a tech driven turnkey residential
                 construction service provider who offers complete services with regards to residential
                 construction or house construction under single roof which includes Architectural Designs,
                 Structural Designs, MEP designs, Interior Designs, House Construction, Home Interiors till

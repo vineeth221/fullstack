@@ -68,7 +68,7 @@ export const AboutUS = () => {
                 17 Columns is where Designs meet Quality for you
               </h1>
               <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-                17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Realty
+                17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Reality
               </p>
               <Link to='/wintage-reality'>
               <motion.button
@@ -102,7 +102,7 @@ export const AboutUS = () => {
               <h2 className="md:text-6xl sm:text-4xl text-3xl mb-4">Know <span style={{ color: "#3f97d2" }}>About Us ?</span></h2>
               <p className="mb-4 md:text-xl">
                 17 Columns is a premium crafted house construction and home interiors brand from the
-                House Of Wintage Realty. 17 Columns is driven by 3 simple principles which are
+                House Of Wintage Reality. 17 Columns is driven by 3 simple principles which are
               </p>
               <div className="flex flex-col items-start gap-4 mt-4 mb-4">
                 <div className="flex items-center">
