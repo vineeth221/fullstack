@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './landing/home';
+import Wintage from './landing/Wintage';
 import ContactUs from './contact/ContactUs';
 import Blog from './blogs/blog';
 import Interiors from './blogs/interiors';
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/about" element={<AboutUs/>} />
         <Route path="/construction" element={<Construction/>} />
         <Route path="/interiors" element={<Interiors/>} />
+        <Route path="/wintage-reality" element={<Wintage/>} />
         {/* <Route path="/packages" element={<Packages/>} /> */}
       </Routes>
     </Router>

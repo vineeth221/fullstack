@@ -8,6 +8,7 @@ import {
   motion,
   animate,
 } from "framer-motion";
+import {Link} from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap';
 import Loader from '../loader/Loader';
 import Navbar from '../../components/navbar/Navbar';
@@ -69,6 +70,7 @@ export const AboutUS = () => {
               <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
                 17 Columns is a premium crafted house construction and home interiors brand from the House of Wintage Realty
               </p>
+              <Link to='/wintage-reality'>
               <motion.button
                 style={{
                   border,
@@ -85,6 +87,7 @@ export const AboutUS = () => {
                 Know about Wintage Reality
                 <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
               </motion.button>
+              </Link>
             </div>
 
             <div className="absolute inset-0 z-0">
