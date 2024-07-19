@@ -909,6 +909,41 @@ background-color:#2f73a1;
   margin: 0rem 2rem;
   max-width: 700px;
 }
+.custom-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4d4f; /* Red background for error */
+  color: #fff; /* White text color */
+  border-radius: 4px;
+  padding: 10px;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 1050;
+  width: max-content;
+  font-size: 14px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.custom-toast-body {
+  flex: 1;
+}
+
+.custom-toast.show {
+  opacity: 1;
+}
+
+.custom-toast-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 @media (min-width: 1024px) {
   /* Large screens */
   .text-responsive {

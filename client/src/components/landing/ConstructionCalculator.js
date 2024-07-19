@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const packages = [
   {
@@ -16,6 +17,26 @@ const packages = [
   }
 ];
 
+const CustomAlert = ({ message, show, onClose }) => {
+  useEffect(() => {
+    if (show) {
+      const timer = setTimeout(onClose, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [show, onClose]);
+
+  if (!show) return null;
+
+  return (
+    <div className="custom-toast">
+      <div className="custom-toast-body">
+        {message}
+        <button type="button" className="custom-toast-close" onClick={onClose}>×</button>
+      </div>
+    </div>
+  );
+};
+
 const ConstructionCalculator = () => {
   const [siteLength, setSiteLength] = useState('');
   const [siteBreadth, setSiteBreadth] = useState('');
@@ -23,23 +44,41 @@ const ConstructionCalculator = () => {
   const [selectedPackage, setSelectedPackage] = useState(packages[0]);
   const [builtUpArea, setBuiltUpArea] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+
+  const validateFields = () => {
+    const invalidFields = [];
+    if (!siteLength || isNaN(parseFloat(siteLength)) || parseFloat(siteLength) <= 0) {
+      invalidFields.push('Site Length');
+    }
+    if (!siteBreadth || isNaN(parseFloat(siteBreadth)) || parseFloat(siteBreadth) <= 0) {
+      invalidFields.push('Site Breadth');
+    }
+    if (!numberOfFloors || isNaN(parseFloat(numberOfFloors)) || parseFloat(numberOfFloors) <= 0) {
+      invalidFields.push('Number of Floors');
+    }
+    return invalidFields;
+  };
 
   const calculateTotalCost = () => {
+    const invalidFields = validateFields();
+    if (invalidFields.length > 0) {
+      setAlertMessage(`Please input ${invalidFields.join(', ')}`);
+      setShowAlert(true);
+      return;
+    }
+
     const length = parseFloat(siteLength);
     const breadth = parseFloat(siteBreadth);
     const floors = parseFloat(numberOfFloors);
 
-    if (!isNaN(length) && !isNaN(breadth) && !isNaN(floors) && length > 0 && breadth > 0 && floors > 0) {
-      const builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
-      const totalBuiltUpArea = (builtUpAreaPerFloor * floors) + 200;
-      setBuiltUpArea(totalBuiltUpArea);
+    const builtUpAreaPerFloor = (length - 2.5) * (breadth - 2.5);
+    const totalBuiltUpArea = (builtUpAreaPerFloor * floors) + 200;
+    setBuiltUpArea(totalBuiltUpArea);
 
-      const cost = selectedPackage.price * totalBuiltUpArea;
-      setTotalCost(cost);
-    } else {
-      setBuiltUpArea(0);
-      setTotalCost(0);
-    }
+    const cost = selectedPackage.price * totalBuiltUpArea;
+    setTotalCost(cost);
   };
 
   return (
@@ -86,6 +125,7 @@ const ConstructionCalculator = () => {
           </Col>
         </Row>
       </div>
+      <CustomAlert message={alertMessage} show={showAlert} onClose={() => setShowAlert(false)} />
     </>
   );
 }
