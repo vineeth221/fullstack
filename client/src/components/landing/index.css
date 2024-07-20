@@ -914,16 +914,16 @@ background-color:#2f73a1;
   bottom: 20px;
   right: 20px;
   background-color: #ff4d4f; /* Red background for error */
-  color: #fff; /* White text color */
-  border-radius: 4px;
-  padding: 10px;
+  color: #fff;
+  border-radius: 7px;
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   z-index: 1050;
   width: max-content;
-  font-size: 14px;
+  padding: 7px;
+  font-size: 12px;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -939,7 +939,7 @@ background-color:#2f73a1;
   background: none;
   border: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 12px;
   cursor: pointer;
   margin-left: 10px;
 }
