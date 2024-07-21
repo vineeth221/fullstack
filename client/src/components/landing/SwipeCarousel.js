@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FaHome, FaTruck, FaTools } from 'react-icons/fa';
 import build12 from '../../components/navbar/icons/build2.jpeg';
 import NewContact from '../../components/contact/NewContact';
 
@@ -33,14 +34,34 @@ const SingleImageWithTextAndContact = () => {
             alt="Interior"
             className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 md:from-black/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/90 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col md:flex-row justify-between items-center p-8">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={TEXT_ANIMATION}
-              className="text-white w-full md:w-1/2 mb-4 md:mb-0"
+              className={`text-white w-full md:w-1/2 mb-4 md:mb-0 flex flex-col justify-center items-start space-y-6 px-4 ${isSmallScreen ? 'text-center' : ''}`}
             >
+              <h2 className="text-lg md:text-4xl font-semibold text-white mt-1">
+                Transform Your Space with Expert Interiors
+              </h2>
+              <p className="text-sm md:text-base text-gray-300">
+                Our team specializes in creating stunning interiors that reflect your style and functionality needs.
+              </p>
+              <div className="flex flex-wrap justify-start gap-6 mt-4">
+                <div className="flex flex-col items-center">
+                  <FaTruck className="text-orange-500 text-4xl" />
+                  <span className="text-sm text-gray-200 mt-2">On Time</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FaHome className="text-blue-500 text-4xl" />
+                  <span className="text-sm text-gray-200 mt-2">Home</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FaTools className="text-green-500 text-4xl" />
+                  <span className="text-sm text-gray-200 mt-2">Quality</span>
+                </div>
+              </div>
             </motion.div>
             {!isSmallScreen && (
               <div className="w-full md:w-1/2">
