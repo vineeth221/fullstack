@@ -40,25 +40,25 @@ const SingleImageWithTextAndContact = () => {
               initial="hidden"
               animate="visible"
               variants={TEXT_ANIMATION}
-              className={`text-white w-full md:w-1/2 mb-4 md:mb-0 flex flex-col justify-center items-start space-y-6 px-4 ${isSmallScreen ? 'text-center text-white' : ''}`}
+              className={`text-white w-full md:w-1/2 mb-4 md:mb-0 flex flex-col justify-center items-start space-y-6 px-4 ${isSmallScreen ? 'text-center' : ''}`}
             >
-              <h2 className={`text-lg md:text-4xl font-semibold ${isSmallScreen ? 'text-white' : 'text-white-400'} mt-3`}>
+              <h2 className={`text-lg md:text-4xl font-semibold ${isSmallScreen ? 'text-white' : 'text-white-400'} mt-4`}>
                 Transform Your Space with Expert Interiors
               </h2>
               <p className={`text-sm md:text-base ${isSmallScreen ? 'text-gray-100' : 'text-gray-300'}`}>
                 Our team specializes in creating stunning interiors that reflect your style and functionality needs.
               </p>
-              <div className="flex flex-wrap justify-start gap-6 mt-4">
+              <div className={`flex m-auto  ${isSmallScreen ? 'flex-row items-center' : 'flex-row justify-center'} gap-6 mt-4`}>
                 <div className="flex flex-col items-center">
-                  <FaTruck className={`text-orange-500 ${isSmallScreen ? 'text-2xl' : 'text-4xl'}`} />
+                  <FaTruck className={`text-orange-500 ${isSmallScreen ? 'text-3xl' : 'text-4xl'}`} />
                   <span className={`text-sm ${isSmallScreen ? 'text-gray-100' : 'text-gray-200'} mt-2`}>On Time</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <FaHome className={`text-blue-500 ${isSmallScreen ? 'text-2xl' : 'text-4xl'}`} />
+                  <FaHome className={`text-blue-500 ${isSmallScreen ? 'text-3xl' : 'text-4xl'}`} />
                   <span className={`text-sm ${isSmallScreen ? 'text-gray-100' : 'text-gray-200'} mt-2`}>Home</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <FaTools className={`text-green-500 ${isSmallScreen ? 'text-2xl' : 'text-4xl'}`} />
+                  <FaTools className={`text-green-500 ${isSmallScreen ? 'text-3xl' : 'text-4xl'}`} />
                   <span className={`text-sm ${isSmallScreen ? 'text-gray-100' : 'text-gray-200'} mt-2`}>Quality</span>
                 </div>
               </div>
