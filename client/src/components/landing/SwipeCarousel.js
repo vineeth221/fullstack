@@ -51,7 +51,7 @@ const SingleImageWithTextAndContact = () => {
         </div>
       </div>
       {isSmallScreen && (
-        <div className="bg-neutral-950 py-8 px-4">
+        <div className="py-8 px-4">
           <NewContact />
         </div>
       )}
