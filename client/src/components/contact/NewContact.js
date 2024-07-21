@@ -105,7 +105,7 @@ const NewContact = () => {
         <div className="flex flex-col">
             <ToastContainer position="top-right" />
             <div className="flex justify-center md:justify-end" style={{ padding: ".3rem" }}>
-                <div ref={formRef} className="w-full max-w-xs p-4 bg-white rounded-lg shadow-md">
+                <div ref={formRef} className="w-full max-w-xs p-4 bg-white rounded-lg border shadow-md">
                     <h1 className="mb-2 text-lg font-bold text-gray-900 text-center">Book FREE Appointment</h1>
                     <p className="mb-3 text-gray-900 text-center text-xs">For Best Quality Construction At Affordable Rates</p>
                     <Form onSubmit={handleFormSubmit} className="space-y-3">

@@ -26,14 +26,14 @@ const SingleImageWithTextAndContact = () => {
 
   return (
     <div>
-      <div className="relative bg-neutral-950 py-8 px-4 h-[400px] md:h-[80vh]">
+      <div className="relative bg-neutral-950 py-3 px-3 h-[400px] md:h-[80vh]">
         <div className="relative w-full h-full">
           <img
             src={build12}
             alt="Interior"
-            className="object-cover w-full h-full rounded-xl"
+            className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent rounded-xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 md:from-black/90 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col md:flex-row justify-between items-center p-8">
             <motion.div
               initial="hidden"
