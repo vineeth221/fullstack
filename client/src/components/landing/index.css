@@ -237,6 +237,9 @@ color: #fff;
 .form-clr{
   background-color:#3f97d2;
 }
+.form-clr-1{
+  background-color:#fff;
+}
 .notifications-container{
 position: relative;
 top :3rem;
