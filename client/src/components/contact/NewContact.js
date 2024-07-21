@@ -5,30 +5,20 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { sendEmail, addNotification, startLoading, stopLoading, sendEmailFail } from '../../components/actions/emailActions';
 import { FiArrowRight } from "react-icons/fi";
-import { useMotionTemplate, useMotionValue } from "framer-motion";
 import Spinner from 'react-bootstrap/Spinner';
 
 const NewContact = () => {
-    const color = useMotionValue("#2f73a1");
     const [name, setName] = useState('');
     const [mobile, setMobile] = useState('');
     const [subject, setSubject] = useState('');
     const [email, setEmail] = useState('');
-    const [formHeight, setFormHeight] = useState(0);
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false); // Initialize the state for screen size
+    const [alertMessage, setAlertMessage] = useState('');
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertType, setAlertType] = useState(''); // 'success' or 'error'
     const formRef = useRef(null);
     const dispatch = useDispatch();
-    // const notifications = useSelector((state) => state.email.notifications);
-    // const sendEmailSuccessState = useSelector((state) => state.email.success);
     const isLoading = useSelector((state) => state.email.isLoading);
-    const border = useMotionTemplate`1px solid ${color}`;
-    // const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
-
-    useEffect(() => {
-        if (formRef.current) {
-            setFormHeight(formRef.current.offsetHeight);
-        }
-    }, [formRef]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -43,6 +33,15 @@ const NewContact = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (showAlert) {
+            const timer = setTimeout(() => {
+                setShowAlert(false);
+            }, 3000); // Hide alert after 3 seconds
+            return () => clearTimeout(timer);
+        }
+    }, [showAlert]);
+
     const encryptButtonHandler = async () => {
         try {
             dispatch(startLoading());
@@ -52,11 +51,16 @@ const NewContact = () => {
             setMobile('');
             setSubject('');
             setEmail('');
+            setAlertMessage('Email sent successfully!');
+            setAlertType('success');
         } catch (error) {
             console.error('Error sending email:', error);
+            setAlertMessage('Failed to send email.');
+            setAlertType('error');
             dispatch(sendEmailFail());
         } finally {
             dispatch(stopLoading());
+            setShowAlert(true); // Ensure this is always executed
         }
     };
 
@@ -80,11 +84,6 @@ const NewContact = () => {
         } else if (!mobileRegex.test(payload.mobile)) {
             smsError.mobile = "Mobile number should be exactly 10 digits";
         }
-        // if (!payload.subject) {
-        //   smsError.subject = "Please fill the subject";
-        // } else if (payload.subject.length < 5 || payload.subject.length > 300) {
-        //   smsError.subject = "Subject should be min 5 and max 300 characters";
-        // }
         return smsError;
     };
 
@@ -93,9 +92,10 @@ const NewContact = () => {
         const payload = { name, mobile, subject, email };
         const smsError = validation(payload);
         if (Object.keys(smsError).length > 0) {
-            const firstErrorKey = Object.keys(smsError)[0];
-            const firstErrorMessage = smsError[firstErrorKey];
-            dispatch(addNotification(firstErrorMessage));
+            const firstErrorMessage = Object.values(smsError)[0];
+            setAlertMessage(firstErrorMessage);
+            setAlertType('error');
+            setShowAlert(true);
             return;
         }
         encryptButtonHandler();
@@ -104,6 +104,21 @@ const NewContact = () => {
     return (
         <div className="flex flex-col">
             <ToastContainer position="top-right" />
+            {showAlert && (
+                <div
+                    className={`fixed bottom-4 right-4 flex items-center justify-between rounded-md shadow-lg text-white ${alertType === 'success' ? 'bg-green-500' : 'bg-red-500'}`}
+                    style={{
+                        padding: "8px",
+                        fontSize: '12px',
+                        transition: 'opacity 0.5s ease-in-out',
+                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                        maxWidth: '300px',
+                    }}
+                >
+                    <span>{alertMessage}</span>
+                    <button onClick={() => setShowAlert(false)} className="ml-4 text-lg font-bold">&times;</button>
+                </div>
+            )}
             <div className="flex justify-center md:justify-end" style={{ padding: ".3rem" }}>
                 <div ref={formRef} className="w-full max-w-xs p-4 bg-white rounded-lg border shadow-md">
                     <h1 className="mb-2 text-lg font-bold text-gray-900 text-center">Book FREE Appointment</h1>
