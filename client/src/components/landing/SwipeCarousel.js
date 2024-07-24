@@ -27,7 +27,7 @@ const SingleImageWithTextAndContact = () => {
 
   return (
     <div>
-      <div className="relative bg-neutral-950 py-3 px-3 h-[370px] md:h-[70vh]">
+      <div className="relative bg-neutral-950 py-3 px-3 h-[350px] md:h-[70vh]">
         <div className="relative w-full h-full">
           <img
             src={build12}
