@@ -218,7 +218,7 @@ const Testimonials = () => {
                 <p className="text-lg sm:text-xl lg:text-4xl xl:text-3xl">
                     Our Valued Clients
                 </p>
-                <span className="colour-text" style={{ fontSize: "1.2rem", fontWeight: "700" }}>Hear it from our beloved home owners</span>
+                <span className="colour-text" style={{ fontSize: "1rem", fontWeight: "700" }}>Hear it from our beloved home owners</span>
             </div>
             <div className="small-space" />
             <Container>

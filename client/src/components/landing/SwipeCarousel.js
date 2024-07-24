@@ -27,7 +27,7 @@ const SingleImageWithTextAndContact = () => {
 
   return (
     <div>
-      <div className="relative bg-neutral-950 py-3 px-3 h-[400px] md:h-[80vh]">
+      <div className="relative bg-neutral-950 py-3 px-3 h-[370px] md:h-[70vh]">
         <div className="relative w-full h-full">
           <img
             src={build12}
@@ -42,7 +42,7 @@ const SingleImageWithTextAndContact = () => {
               variants={TEXT_ANIMATION}
               className={`text-white w-full md:w-1/2 mb-4 md:mb-0 flex flex-col justify-center items-start space-y-6 px-4 ${isSmallScreen ? 'text-center' : ''}`}
             >
-              <h2 className={`text-lg md:text-4xl font-semibold ${isSmallScreen ? 'text-white' : 'text-white-400'} mt-4`}>
+              <h2 className={`text-lg md:text-4xl font-semibold ${isSmallScreen ? 'text-white' : 'text-white-400'} mt-3`}>
                 Transform Your Space with Expert Interiors
               </h2>
               <p className={`text-sm md:text-base ${isSmallScreen ? 'text-gray-100' : 'text-gray-300'}`}>
@@ -72,7 +72,7 @@ const SingleImageWithTextAndContact = () => {
         </div>
       </div>
       {isSmallScreen && (
-        <div className="py-8 px-4">
+        <div className="pt-5 px-4">
           <NewContact />
         </div>
       )}
